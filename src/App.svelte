@@ -20,10 +20,11 @@
         const _resp = await fetch(
           "https://qiniu-1.lfcky.com/SmileySans-Oblique.ttf.woff2"
         );
+        const _resp_clone = _resp.clone();
         // 丢缓存里面去
         await cache.put(
           "https://qiniu-1.lfcky.com/SmileySans-Oblique.ttf.woff2",
-          _resp
+          _resp_clone
         );
         return await _resp.arrayBuffer();
       }
