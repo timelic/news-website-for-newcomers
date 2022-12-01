@@ -72,6 +72,9 @@
         text.style.opacity = "1";
         text.classList.add("animate__fadeInUp");
         client.removeEventListener("scroll", cb1);
+        document
+          .getElementById("num-of-volunteers-chart-container")
+          .setAttribute("style", "--opacity: 0.5");
       }
     };
     client.addEventListener("scroll", cb1);
@@ -82,7 +85,7 @@
         client.removeEventListener("scroll", cb2);
         document
           .getElementById("num-of-volunteers-chart-container")
-          .setAttribute("style", "--opacity: 0");
+          .setAttribute("style", "--opacity: 1");
       }
     };
     client.addEventListener("scroll", cb2);
@@ -100,7 +103,7 @@
     <div style="display: block; height: 150px; width: 100%"></div>
   </div>
 
-  <div id="num-of-volunteers-chart-container" style="--opacity: 0.1"></div>
+  <div id="num-of-volunteers-chart-container" style="--opacity: 1"></div>
   <div id="num-of-volunteers-title">志愿登记人数</div>
 </section>
 
@@ -114,28 +117,30 @@
     justify-content: center;
     position: relative;
 
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      transition: 0.3s;
+      background-image: url("../assets/paper.jpg");
+      background-size: contain;
+    }
     &-chart-container {
       width: 800px;
       height: 500px;
       margin-bottom: 2rem;
       position: relative;
-      &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        opacity: var(--opacity);
-        transition: 0.3s;
-        // background-image: url("../assets/organ.webp");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
+      opacity: var(--opacity);
+      transition: 0.3s;
     }
     &-title {
       font-size: 1rem;
+      font-weight: bold;
     }
     &-text-container {
       position: absolute;
@@ -154,7 +159,7 @@
       z-index: 99;
       padding: 1.5rem 8rem;
       font-size: 1.5rem;
-      font-family: Smiley Sans;
+      font-family: var(--theme-font);
       line-height: 2.5rem;
       border-radius: 1rem;
       text-align: center;
@@ -163,12 +168,12 @@
     }
   }
   .annotations {
-    font-family: Smiley Sans;
+    font-family: var(--theme-font);
     line-height: 1.5rem;
     font-size: 1.25rem;
     width: 250px;
     :first-child {
-      color: #ff5d5d;
+      color: #ffb35d;
     }
   }
 </style>

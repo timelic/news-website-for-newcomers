@@ -153,7 +153,7 @@
     }
 
     #text {
-      font-family: Smiley Sans;
+      font-family: var(--theme-font);
       font-size: 4rem;
       line-height: 5.5rem;
       color: white;

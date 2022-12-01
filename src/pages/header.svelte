@@ -49,7 +49,7 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    font-family: Smiley Sans;
+    font-family: var(--theme-font);
     align-items: center;
     #header-container {
       max-width: 1200px;
@@ -64,7 +64,6 @@
         }
       }
       .subtitle {
-        font-family: "腾讯体";
         font-size: 2.25rem;
         display: flex;
         align-items: center;

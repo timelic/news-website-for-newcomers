@@ -3,29 +3,24 @@
   import Header from "./pages/header.svelte";
   import NewspaperClipping from "./pages/newspaper_clipping.svelte";
   import NumOfVolunteers from "./pages/num_of_volunteers.svelte";
+  import WhatHaveWeDone from "./pages/what_have_we_done.svelte";
   import Part3 from "./pages/part3.svelte";
 
   // 下载字体资源 svelte居然不允许顶层await
   let hasLoadedFont = false;
   (async () => {
     const CACHE_NAME = "cache";
+    const FONT_URL = "https://qiniu-1.lfcky.com/SmileySans-Oblique.ttf.woff2";
     const getFontBuffer = async () => {
       const cache = await caches.open(CACHE_NAME);
-      const resp = await cache.match(
-        "https://qiniu-1.lfcky.com/SmileySans-Oblique.ttf.woff2"
-      );
+      const resp = await cache.match(FONT_URL);
       if (resp) {
         return await resp.arrayBuffer();
       } else {
-        const _resp = await fetch(
-          "https://qiniu-1.lfcky.com/SmileySans-Oblique.ttf.woff2"
-        );
+        const _resp = await fetch(FONT_URL);
         const _resp_clone = _resp.clone();
         // 丢缓存里面去
-        await cache.put(
-          "https://qiniu-1.lfcky.com/SmileySans-Oblique.ttf.woff2",
-          _resp_clone
-        );
+        await cache.put(FONT_URL, _resp_clone);
         return await _resp.arrayBuffer();
       }
     };
@@ -55,6 +50,7 @@
   <!-- 剪报 -->
   <NewspaperClipping />
   <NumOfVolunteers />
+  <WhatHaveWeDone />
   <!-- <Part3 /> -->
   <div style="background-color: white; height: 200vh"></div>
 </main>
