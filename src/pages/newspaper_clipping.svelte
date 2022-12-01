@@ -60,7 +60,7 @@
       <div>大爱如潮 无碍奔涌</div>
       <div>在一次次的生命接力中</div>
       <div>在一次次奔走传递间</div>
-      <div>越来越多人以勇气和真诚去奉献</div>
+      <div>越来越多人以<underline class="sky">勇气和真诚</underline>去奉献</div>
       <div>最无价的生命之礼</div>
     </div>
   </div>
@@ -71,8 +71,9 @@
     // position: sticky;
     // top: 0;
     display: flex;
-    height: 100vh;
-    background-color: rgb(255, 174, 174);
+    height: 90vh;
+    background-color: #ffaeae;
+    background-image: url("../assets/bg.jpg");
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -94,7 +95,7 @@
       top: 0;
       left: 0;
       opacity: var(--progress);
-      box-shadow: rgb(0 0 0 / 25%) 0px 25px 50px -12px, #a3a3a3 0 0 5px -2px;
+      box-shadow: rgb(66 0 0 / 65%) 0px 25px 50px -12px, #a3a3a3 0 0 5px -2px;
       border-radius: 5px;
       border: 1px solid snow;
       &:nth-of-type(1) {
