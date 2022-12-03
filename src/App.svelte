@@ -64,8 +64,6 @@
   <NewspaperClipping />
   <Stars />
   <WhatBringsDonationIncrement />
-  <!-- <Part3 /> -->
-  <div style="background-color: white; height: 200vh"></div>
 </main>
 
 <style lang="scss" global>

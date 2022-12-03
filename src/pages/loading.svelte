@@ -37,8 +37,8 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(255, 145, 0);
-    background-image: url("../assets/bg.jpg");
+    background-color: black;
+    // background-image: url("../assets/bg.jpg");
     background-size: cover;
     display: flex;
     align-items: center;

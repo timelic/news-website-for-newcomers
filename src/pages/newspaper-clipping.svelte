@@ -10,7 +10,7 @@
     const scrollCb = () => {
       const scrolled = client.scrollTop;
       imgs.forEach((img, i) => {
-        const step = (el.offsetHeight * 0.8) / 13;
+        const step = (el.offsetHeight * 0.6) / 13;
         const start = el.offsetTop - window.innerHeight * 0.8 + step * i,
           end = el.offsetTop - window.innerHeight * 0.8 + step * (i + 1);
         const progress = Math.min(

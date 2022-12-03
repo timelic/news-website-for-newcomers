@@ -2,23 +2,27 @@
   import { onSee } from "@utils";
   import { onMount } from "svelte";
   import runners from "../assets/runners.gif";
-  onMount(() => {
-    const client = document.getElementById("app");
-    const el = document.getElementById("what-brings-donation-increment");
-    const text = document.getElementById("what-brings-donation-increment-text");
-    const cb = () => {
-      if (client.scrollTop >= el.offsetTop - screen.height + el.offsetHeight) {
-        text.style.opacity = "1";
-        text.classList.add("animate__zoomInDown");
-        client.removeEventListener("scroll", cb);
-      }
-    };
-    client.addEventListener("scroll", cb);
-  });
-  // onSee("runners", () => {
-  //   const img = document.getElementById("runners") as HTMLImageElement;
-  //   img.src = runners;
-  // });
+  function textAppear(textElId: string) {
+    onMount(() => {
+      const client = document.getElementById("app");
+      const el = document.getElementById(textElId);
+      const text = document.getElementById(`${textElId}-text`);
+      const cb = () => {
+        if (
+          client.scrollTop >=
+          el.offsetTop - screen.height + el.offsetHeight
+        ) {
+          text.style.opacity = "1";
+          text.classList.add("animate__zoomInDown");
+          client.removeEventListener("scroll", cb);
+        }
+      };
+      client.addEventListener("scroll", cb);
+    });
+  }
+  textAppear("what-brings-donation-increment");
+  textAppear("what-difficulty-we-face");
+  textAppear("what-else-we-can-do");
 </script>
 
 <section id="what-brings-donation-increment" style="--progress: 0">
@@ -27,7 +31,7 @@
   </div>
 </section>
 
-<section class="text-align">
+<section class="text-align text-left">
   <!-- 1 -->
   <h2>1. 扩大的“奔跑团”：各地协调员的普及与规范</h2>
   <div>
@@ -94,10 +98,179 @@
   <div>
     2020年5月28日，十三届全国人大三次会议表决通过了《中华人民共和国民法典》，宣告中国“民法典时代”正式到来。其中，人格权独立成编，在第二章生命权、身体权和健康权中对遗体和人体器官、人体组织捐献做出明确规定，明确禁止人体买卖，是民法典中的亮点，也为器官捐献事业的发展又加固一层坚实的保护网。
   </div>
+  <div class="legal">
+    <div class="legal-title">第一千零六条</div>
+    完全民事行为能力人有权依法自主决定无偿捐献其人体细胞、人体组织、人体器官、遗体。任何组织或者个人不得强迫、欺骗、利诱其捐献。
+    完全民事行为能力人依据前款规定同意捐献的，应当采用书面形式，也可以订立遗嘱。
+    自然人生前未表示不同意捐献的，该自然人死亡后，其配偶、成年子女、父母可以共同决定捐献，决定捐献应当采用书面形式。
+    <div class="legal-title">第一千零七条</div>
+    禁止以任何形式买卖人体细胞、人体组织、人体器官、遗体。 违反前款规定的买卖行为无效。
+    <div style="text-align: right">——《中华人民共和国民法典》</div>
+  </div>
+  <div>
+    2021年5月，中国人体器官捐献管理中心与公安部全国公民身份证号码查询服务中心签署协议，在人体器官捐献志愿登记系统开通姓名和身份证号真实性核验功能。
+  </div>
+  <div>
+    2022年9月1日，据国家卫生健康委员会网站消息，国家卫生健康委近期答复政协第十三届全国委员会第五次会议委员《关于制定人体器官捐献法的提案》时表示，《人体器官捐献法》修订取得实质性进展，《条例》拟更名为《人体器官捐献与移植条例》，也将于近期颁布实施。
+  </div>
+  <div>
+    据深圳大学法学院讲师段礼乐老师介绍：“修订草案从审批管理权限的分配、活体器官移植的知情同意、器官移植的登记报告等方面完善了器官移植管理制度，形成明确的判断标准和完善的程序规则，既能约束医疗机构和医务人员的行为，也能加强对相关主体的保护，减少器官移植中的医疗风险、法律风险和伦理风险。”
+  </div>
+  <div>
+    七年来，相关法律法规及管理条例积极调整、不断完善，着力弥补人体器官移植相关环节的制度漏洞，并实现与刑法等相关法律规范的衔接和协调，规范人体器官捐献、分配、移植等行为，为器官捐献事业的发展保驾护航。
+  </div>
+</section>
+
+<section id="what-difficulty-we-face" style="--progress: 0">
+  <div id="what-difficulty-we-face-text" class="animate__animated">
+    是什么带来了捐献数量的增长？
+  </div>
+</section>
+
+<section class="text-align text-left">
+  <div>
+    在各方的努力下，目前我国器官捐献事业取得了长足的进步，器官捐献、移植数量两项指标均居世界第二位，但是每百万人口器官捐献率（PMP）却仅为世界第四十八位。
+  </div>
+  <div>
+    2020年，作为中国PMP最高的省份，北京市PMP数值仅为22.66，相当于美国的一半左右。而其余绝大部分省份PMP数值均低于4。推进器官捐献事业，还需要更长期的努力与改进和更广泛的认可与支持。
+  </div>
+  <iframe
+    src="https://dycharts.com/xshow/index.html?id=73a2b5979999c30b1840bed8a778af19"
+    width="614"
+    height="413"
+    scrolling="no"
+    frameborder="0"
+    title=""></iframe>
+  <div>
+    1.传统观念的影响
+    既往研究表明，中国PMP低很大程度上源于传统观念的影响。在中国传统观念中，死者应当入土为安，代代相传的传统观念成为维系家庭的情感联系，也在人们心中烙下深深的印记。所以很多人对于捐献自己的器官尚有不小的顾虑。而对于亲属的意愿，让刚失去亲人的家属接受则是难上加难。
+  </div>
+  <div>
+    2.地区分布不均
+    与此同时，全国各地具有移植资质的医院数量也分布不均。根据中华人民共和国国家卫生健康委员会2022年8月发布的数据，全国共有183家具备器官移植资格的医院，但是在数量上却存在显著的地区差异。
+  </div>
+  <div>
+    一些经济较为发达的地区拥有较多的具备器官移植资格的医院，而欠发达地区则相对来说比较少。北京具备移植资质的医院有17所，为全国最多。上海、山东、广东等省份也均有十家以上的医院具备器官移植资格。而内蒙古、吉林、黑龙江、西藏、宁夏等省份，仅有不超过两所具备器官移植资质的医院。
+  </div>
+  <iframe
+    src="https://dycharts.com/xshow/index.html?id=c_b11b07047f3e83dcc7fae19e0d1b0511"
+    width="700"
+    height="520"
+    scrolling="no"
+    frameborder="0"
+    title=""></iframe>
+  <div>
+    除地区医疗水平分布不平衡外，国内器官捐献还面临技术瓶颈和专业人士缺乏等难题。
+  </div>
+  <div>
+    器官捐献流程繁多，且需要有专业的协调员来从事潜在器官供体搜查、家属心理辅导等工作。在美国，每百万人口配备7~12名协调员，在西班牙相应人口配备7名协调员。虽然中国协调员工作发展成效显著，但就中国目前的协调员数量远远不足。导致不少潜在器官供体还有待发现，器官供需矛盾仍然是我国面临的主要困境。
+  </div>
+  <div>
+    而我们能做的，除了我们看到，推动我国器官移植事业发展之路道阻且长，提升器官移植整体水平、建设器官移植强国需要多端发力。
+  </div>
+  <div class="methods">
+    <div>第一，准入更多的优质供体器官用于合法人体器官捐献事业。</div>
+    <div>第二，进一步提升移植手术质量，提升器官捐献利用率。</div>
+    <div>第三，补充完善相关条例，建立中国模式的管理方案。</div>
+    <div>第四，正视发展差距，补齐落后短板，形成全国器官捐献一张网。</div>
+  </div>
+</section>
+
+<section id="what-else-we-can-do" style="--progress: 0">
+  <div id="what-else-we-can-do-text" class="animate__animated">
+    我们还能做什么？
+  </div>
+</section>
+
+<div class="text-align">
+  <div>提及器官捐献，</div>
+  <div>有人觉得这是奉献，大爱无疆；</div>
+  <div>有人认为应该延续传统，入土为安……</div>
+  <div>在签署知情同意书那一刻，</div>
+  <div>我们总会以此作为最后的道别而哀痛万分。</div>
+  <div>犹豫、彷徨、不舍、悲痛......</div>
+  <div>是放下手中的笔，留住最后的不舍？</div>
+  <div>还是擦干泪水，尊重这份最后的爱传递下去？</div>
+  <div>一个又一个家属做出了他们的决定。</div>
+</div>
+
+<section class="text-align text-left story">
+  <div>
+    2020年，小溪的外公因为脑梗不幸去世。病情凶险又发展迅速，加上老人之前就有高血压等老年疾病，送到医院就收到了病危通知书，即便送到了杭州的省级医院也无力回天。整个家被这份突如其来的沉痛打击紧紧裹挟着。哀痛、不舍、痛哭，疾病和死亡似乎像一把无情的剪刀将亲人间灯火可温的血脉联系残忍剪断，家人们一时间都难以接受。
+  </div>
+  <div>
+    悲痛中，舅舅突然想起外公生前几次在看新闻报道时提出捐献器官的想法都被家人打断了。
+  </div>
+  <div>“您现在不是挺健康的嘛？怎么想起说这个？”“好好的，说这话干什么？”</div>
+  <div>
+    而作为儿子，除了痛苦和悲伤，他也想帮父亲完成最后的心愿。他觉得，这是对逝者最后的尊重，更是生者唯一能做的事。所以，当父亲去世后，他决定代父亲正式向家人提出器官捐献的请求。
+  </div>
+  <div>
+    起初，受宗教信仰和传统观念的影响，外婆并不同意舅舅的请求。除了彼时失去伴侣的无助和悲伤，让她更不能接受与看似与传统观念和佛教信仰中遗体应该完整的观念相悖的事。
+  </div>
+  <div>
+    而此刻，和很多器官捐献志愿者家属一样，小溪一家面临两难的抉择，一端是传统与情感，一端是尊重与大爱。对于如何决定，究竟如何守护这份亲情，大家都在沉思......
+  </div>
+</section>
+<section class="text-align">
+  <div style="text-align: center">
+    <div class="red-ques">这个决定意味着什么？</div>
+    <div>「一对角膜、两个肾脏、 一个肝脏、</div>
+    <div>一颗心、两叶肺、一个胰腺」</div>
+    <div>这是一个人可以捐出的器官</div>
+    <div>也可能让9个人接受器官，</div>
+    <div>成就9段重生的奇迹。</div>
+  </div>
+  <div>
+    提到外公，小溪总是感觉这位长者是很安心、温暖的依靠。“他生前便是个老好人，我们家旁边住着外来务工的人，外公总是拿些海鲜、肉什么的送过去，来不及照看小孩的时候他们也会把孩子放在我们家。街坊邻居都说他是个好人。他更是一个信仰坚定的老共产党员，外公说自己是抗美援朝时就是党员了，即便是退休了也平日，外公就教导我，要帮助2008年的汶川地震。我想，外公在生命的最后时刻，也在用身体力行教导我，去做好人，多做善事。”
+  </div>
+  <div style="text-align: center">
+    <div class="space"></div>
+    <div class="red-ques">这些人是如何接受器官的呢？</div>
+    <div>在中国</div>
+    <div>一颗心、两叶肺、一个胰腺」</div>
+    <div>器官捐献的完成不只需要本人生前的移植意愿</div>
+    <div>也需要在进行手术前完成一系列的流程</div>
+    <div>确保这份重生的礼物能够真正递送到需要的人身边</div>
+  </div>
+</section>
+<div>一个动图</div>
+<section class="text-align text-left">
+  <div>
+    但是，亲友这份期待留给世界的最后一份礼物，却无法承担太久的等候。事实上，器官捐献不仅是一场爱的接力，更是一场时间的赛跑。
+  </div>
+  <div>
+    医学上，通常以“热缺血时间”表示脑死亡后器官可存活的时间。从器官捐献者心脏停跳到将器官切取完成，进行冷灌注（捐献器官用器官保存液进行灌注，利于保持移植物的活性）这段时间称为热缺血时间。热缺血时，虽然血流中断但移植物的组织细胞仍继续代谢，期间最易发生移植物缺血的严重后果。
+  </div>
+  <div>
+    所以，在我们犹豫不决的时候，正是进行移植手术的黄金时间。晚一分钟，死者器官的评估结果就多一分不确定性，也就有一个等待者可能会失去重生的机会。
+  </div>
+</section>
+
+<section class="text-align text-left story">
+  <div>
+    最后，舅舅还是说服了家人，外婆也选择尊重外公的心愿，因为她和外公一样，“希望能救一个是一个”。在全家达成帮助外公奔赴这场接力的共识后，舅舅第一时间与医院取得了联系。
+  </div>
+  <div>
+    虽然外公生前只是在新闻上看到有关器官捐献的报道，也只是在生前口头表达过关于器官捐献的强烈意愿，本人并没有确认签署志愿协议。但是舅舅还是在医院和工作人员的帮助下，完成评估、登记、确认等一系列流程，帮外公完成了最后的心愿。
+  </div>
+  <div>
+    最后，小希外公的眼角膜成功帮助一位患者重见光明。这位慈祥、温暖的长者也如愿在生命的最后为世界留下了一抹光亮。
+  </div>
+</section>
+<section class="text-align" id="last">
+  <div>爱与勇气，颠扑不破。</div>
+  <div>上苍用疾病与死亡考验我们，</div>
+  <div>我们用大爱和勇气诠释生命的意义。</div>
+  <div>而我们也始终相信，</div>
+  <div>爱有回音，爱与勇气，</div>
+  <div>同频搏动，定会战胜疾病。</div>
 </section>
 
 <style lang="scss">
-  #what-brings-donation-increment {
+  #what-brings-donation-increment,
+  #what-difficulty-we-face,
+  #what-else-we-can-do {
     --height: 40vh;
     height: var(--height);
     line-height: var(--height);
@@ -125,10 +298,16 @@
       filter: brightness(0.3);
       opacity: 0.8;
     }
+    &-text {
+      opacity: 0;
+    }
   }
   .text-align {
     font-size: 1.25rem;
     background: var(--pink-bg);
+    & > div {
+      margin: 1rem 0;
+    }
   }
   img {
     max-width: 800px;
@@ -141,6 +320,101 @@
     margin: 2rem 0;
     &:not(:first-of-type) {
       margin-top: 4rem;
+    }
+  }
+  .text-left {
+    text-align: left !important;
+  }
+  .legal {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px;
+    background-color: white;
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-weight: bolder;
+    margin: 2rem 0;
+    font-family: "Kaiti", serif;
+    transition: 0.3s;
+    .legal-title {
+      font-size: 1.5rem;
+    }
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+        rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+  }
+  .methods {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    div {
+      width: fit-content;
+      background-color: white;
+      font-size: 1.1rem;
+      padding: 0.5rem 2rem;
+      border-radius: 2rem;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      @for $i from 0 through 3 {
+        &:nth-of-type(#{$i + 1}) {
+          margin-left: calc(8rem * #{$i});
+        }
+      }
+    }
+  }
+  .story {
+    font-size: 1.1rem;
+    & > div {
+      transform: skewX(-6deg);
+    }
+  }
+  .red-ques {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 2rem !important;
+    font-size: 3rem;
+    width: fit-content;
+    text-align: center;
+    // 文字颜色是红色渐变
+    background: linear-gradient(
+      90deg,
+      rgb(251, 102, 65) 0%,
+      rgb(244, 124, 255) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:not(:first-of-type) {
+      margin-top: 2rem !important;
+      padding-top: 2rem;
+    }
+    .space {
+      display: block;
+      widows: 200px;
+      height: 3rem;
+    }
+  }
+  #last {
+    position: relative;
+    color: white;
+    div {
+      z-index: 99;
+    }
+    background: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../assets/last.jpeg");
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.3);
+      // opacity: 0.8;
+      z-index: -1;
     }
   }
 </style>
