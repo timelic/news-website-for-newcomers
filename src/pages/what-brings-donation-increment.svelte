@@ -1,7 +1,9 @@
 <script lang="ts">
   import { onSee } from "@utils";
   import { onMount } from "svelte";
+  import anime from "animejs";
   import runners from "../assets/runners.gif";
+
   function textAppear(textElId: string) {
     onMount(() => {
       const client = document.getElementById("app");
@@ -23,6 +25,20 @@
   textAppear("what-brings-donation-increment");
   textAppear("what-difficulty-we-face");
   textAppear("what-else-we-can-do");
+  onMount(() => {
+    onSee("last", () => {
+      // 用animejs 让文字逐行出现
+      anime({
+        targets: "#last>div",
+        opacity: 1,
+        translateY: [100, 0],
+        scale: 1,
+        easing: "easeOutExpo",
+        duration: 1000,
+        delay: anime.stagger(100),
+      });
+    });
+  });
 </script>
 
 <section id="what-brings-donation-increment" style="--progress: 0">
@@ -364,9 +380,11 @@
     }
   }
   .story {
+    font-family: var(--theme-font-regular);
     font-size: 1.1rem;
     & > div {
-      transform: skewX(-6deg);
+      transform: skewX(-5deg);
+      // font-style: oblique;
     }
   }
   .red-ques {
@@ -400,6 +418,8 @@
     color: white;
     div {
       z-index: 99;
+      opacity: 0;
+      transform: scale(1.2);
     }
     background: none;
     &::before {

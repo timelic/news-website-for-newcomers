@@ -16,7 +16,8 @@
   --underline-progress: 1;
 
   /* --theme-font: Smiley Sans; */
-  --theme-font: "方正兰亭黑", "黑体";
+  --theme-font: "方正兰亭黑 Medium", "黑体";
+  --theme-font-regular: "方正兰亭黑 Regular", "黑体";
 
   --pink-bg: linear-gradient(
     90deg,

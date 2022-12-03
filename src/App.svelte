@@ -9,7 +9,7 @@
   import WaitingForOrgan from "./pages/waiting-for-organ.svelte";
   import Stars from "./pages/stars.svelte";
   import WhatBringsDonationIncrement from "./pages/what-brings-donation-increment.svelte";
-  import Part3 from "./pages/part3.svelte";
+  import Footer from "./pages/footer.svelte";
 
   import ThirtyWCircle from "./pages/30w-circle.svelte";
 
@@ -18,7 +18,8 @@
   (async () => {
     const CACHE_NAME = "cache";
     const FONT_URL = "https://qiniu-1.lfcky.com/SourceHanSansCN-Medium.otf";
-    const getFontBuffer = async () => {
+    const FONT_URL2 = "https://qiniu-1.lfcky.com/SourceHanSansCN-Regular.otf";
+    const getFontBuffer = async (FONT_URL: string) => {
       const cache = await caches.open(CACHE_NAME);
       const resp = await cache.match(FONT_URL);
       if (resp) {
@@ -31,8 +32,15 @@
         return await _resp.arrayBuffer();
       }
     };
-    const fontface = new FontFace("方正兰亭黑", await getFontBuffer());
-    document.fonts.add(fontface);
+    const fontface = new FontFace(
+      "方正兰亭黑 Medium",
+      await getFontBuffer(FONT_URL)
+    );
+    const fontface2 = new FontFace(
+      "方正兰亭黑 Regular",
+      await getFontBuffer(FONT_URL2)
+    );
+    document.fonts.add(fontface).add(fontface2);
     hasLoadedFont = true;
   })();
 </script>
@@ -64,6 +72,7 @@
   <NewspaperClipping />
   <Stars />
   <WhatBringsDonationIncrement />
+  <Footer />
 </main>
 
 <style lang="scss" global>
