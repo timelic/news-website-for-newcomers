@@ -165,6 +165,9 @@
     }
   }
   .text-align {
+    padding-right: calc((100vw - 1000px) / 2) !important;
+    padding-left: calc((100vw - 1000px) / 2) !important;
+    margin: auto;
     text-align: center;
     font-size: 1.5rem;
     font-family: var(--theme-font);

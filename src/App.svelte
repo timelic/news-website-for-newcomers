@@ -1,13 +1,14 @@
 <script lang="ts">
   import Loading from "./pages/loading.svelte";
   import Header from "./pages/header.svelte";
-  import NewspaperClipping from "./pages/newspaper_clipping.svelte";
-  import NumOfVolunteers from "./pages/num_of_volunteers.svelte";
-  import WhatHaveWeDone from "./pages/what_have_we_done.svelte";
+  import NewspaperClipping from "./pages/newspaper-clipping.svelte";
+  import NumOfVolunteers from "./pages/num-of-volunteers.svelte";
+  import WhatHaveWeDone from "./pages/what-have-we-done.svelte";
   import HeaderSmallText from "./pages/header-small-text.svelte";
   import StatisticalData from "./pages/statistical-data.svelte";
   import WaitingForOrgan from "./pages/waiting-for-organ.svelte";
   import Stars from "./pages/stars.svelte";
+  import WhatBringsDonationIncrement from "./pages/what-brings-donation-increment.svelte";
   import Part3 from "./pages/part3.svelte";
 
   import ThirtyWCircle from "./pages/30w-circle.svelte";
@@ -16,7 +17,7 @@
   let hasLoadedFont = false;
   (async () => {
     const CACHE_NAME = "cache";
-    const FONT_URL = "https://qiniu-1.lfcky.com/SourceHanSansCN-Medium.ttf";
+    const FONT_URL = "https://qiniu-1.lfcky.com/SourceHanSansCN-Medium.otf";
     const getFontBuffer = async () => {
       const cache = await caches.open(CACHE_NAME);
       const resp = await cache.match(FONT_URL);
@@ -62,6 +63,7 @@
   <WhatHaveWeDone />
   <NewspaperClipping />
   <Stars />
+  <WhatBringsDonationIncrement />
   <!-- <Part3 /> -->
   <div style="background-color: white; height: 200vh"></div>
 </main>
