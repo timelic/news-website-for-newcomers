@@ -15,10 +15,23 @@
 
   --underline-progress: 1;
 
-  --theme-font: Smiley Sans;
+  /* --theme-font: Smiley Sans; */
+  --theme-font: "方正兰亭黑", "黑体";
+
+  --pink-bg: linear-gradient(
+    90deg,
+    hsl(0deg 100% 92%) 0%,
+    hsl(295deg 100% 97%) 100%
+  );
 }
 
 #app {
   height: 100vh;
-  overflow-y: scroll;
+  overflow: hidden scroll;
+  font-family: var(--theme-font);
+}
+
+.bg-card {
+  background-color: #ffffff99 !important;
+  backdrop-filter: blur(10px) !important;
 }

@@ -4,13 +4,19 @@
   import NewspaperClipping from "./pages/newspaper_clipping.svelte";
   import NumOfVolunteers from "./pages/num_of_volunteers.svelte";
   import WhatHaveWeDone from "./pages/what_have_we_done.svelte";
+  import HeaderSmallText from "./pages/header-small-text.svelte";
+  import StatisticalData from "./pages/statistical-data.svelte";
+  import WaitingForOrgan from "./pages/waiting-for-organ.svelte";
+  import Stars from "./pages/stars.svelte";
   import Part3 from "./pages/part3.svelte";
+
+  import ThirtyWCircle from "./pages/30w-circle.svelte";
 
   // 下载字体资源 svelte居然不允许顶层await
   let hasLoadedFont = false;
   (async () => {
     const CACHE_NAME = "cache";
-    const FONT_URL = "https://qiniu-1.lfcky.com/SmileySans-Oblique.ttf.woff2";
+    const FONT_URL = "https://qiniu-1.lfcky.com/SourceHanSansCN-Medium.ttf";
     const getFontBuffer = async () => {
       const cache = await caches.open(CACHE_NAME);
       const resp = await cache.match(FONT_URL);
@@ -24,7 +30,7 @@
         return await _resp.arrayBuffer();
       }
     };
-    const fontface = new FontFace("Smiley Sans", await getFontBuffer());
+    const fontface = new FontFace("方正兰亭黑", await getFontBuffer());
     document.fonts.add(fontface);
     hasLoadedFont = true;
   })();
@@ -47,10 +53,15 @@
   </div>
   <!-- 头图 -->
   <Header />
+  <HeaderSmallText />
   <!-- 剪报 -->
-  <NewspaperClipping />
   <NumOfVolunteers />
+  <StatisticalData />
+  <ThirtyWCircle />
+  <WaitingForOrgan />
   <WhatHaveWeDone />
+  <NewspaperClipping />
+  <Stars />
   <!-- <Part3 /> -->
   <div style="background-color: white; height: 200vh"></div>
 </main>

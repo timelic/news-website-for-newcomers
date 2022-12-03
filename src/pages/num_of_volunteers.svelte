@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Line } from "@antv/g2plot";
   import { onMount } from "svelte";
+  import { onSee } from "@utils";
   onMount(() => {
     const data = [
       { year: "2010", value: 1087 },
@@ -58,6 +59,12 @@
           offsetY: -400,
         },
       ],
+      animation: {
+        appear: {
+          animation: "path-in",
+          duration: 5000,
+        },
+      },
     });
 
     line.render();
@@ -94,7 +101,7 @@
 
 <section id="num-of-volunteers">
   <div id="num-of-volunteers-text-container">
-    <div id="num-of-volunteers-text" class="animate__animated">
+    <div id="num-of-volunteers-text" class="animate__animated bg-card">
       <div>截止到2022年11月</div>
       <div>中国人体器官捐献管理中心登记的</div>
       <div>志愿人数已达<underline>5584251人</underline></div>
@@ -170,7 +177,7 @@
   .annotations {
     font-family: var(--theme-font);
     line-height: 1.5rem;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     width: 250px;
     :first-child {
       color: #ffb35d;

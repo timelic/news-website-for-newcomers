@@ -1,5 +1,23 @@
 <script lang="ts">
+  import anime from "animejs";
+  import { onMount } from "svelte";
   import HandHoldingHeart from "../assets/HandHoldingHeart.svg";
+  import TitleImage from "../assets/heart.svg";
+  const battery = {
+    cycles: "0",
+  };
+  onMount(() => {
+    const num = document.getElementById("header-num");
+    setInterval(() => {
+      num.innerText = parseInt(battery.cycles).toString();
+    }, 1000 / 60);
+    anime({
+      targets: battery,
+      cycles: 5580000,
+      duration: 1000,
+      easing: "linear",
+    });
+  });
 </script>
 
 <div id="header">
@@ -10,34 +28,14 @@
         <img src="{HandHoldingHeart}" alt="" />
       </div>
       <h1>７年奔赴</h1>
-      <h1>
-        一场
-        <underline>5580000</underline>
-        人的生命接力
-      </h1>
+      <h1>一场<underline id="header-num">0</underline>人的生命接力</h1>
     </div>
-    <div id="divided-line"></div>
-    <div id="small-text">
-      <div>叶沙，一个热爱篮球的16岁少年，2017年4月27日因突发脑溢血去世。</div>
-      <div>然而，他的梦想并没有就此消失。</div>
-      <div>
-        2019年，“接受”叶沙器官的五个人组成的球队，登上了国际篮联篮球世界杯开幕式的舞台
-      </div>
-      <div>
-        <underline>“一个人的球队”</underline>
-        幸运地收到了生命的礼物，也奋力追逐那个16岁少年的篮球梦
-      </div>
-      <div>生命的活力又一次在爱的擎举中迸发出崭新的张力</div>
-      <div>而2022年6月13日，“一个人的球队”中的成员周海不幸离世</div>
-      <div>
-        家人按照他的遗愿，签署了<underline
-          >《人体器官捐献亲属确认登记表》</underline
-        >，他也最终捐献了自己的眼角膜
-      </div>
-      <div>
-        在“重生”之路上，生命的礼物再次奔赴.这次奔赴，是奇遇，是延续，更是新生
-      </div>
-    </div>
+    <img
+      id="title-image"
+      class="animate__animated animate__pulse animate__infinite	"
+      src="{TitleImage}"
+      alt=""
+    />
   </div>
 </div>
 
@@ -52,18 +50,39 @@
     font-family: var(--theme-font);
     align-items: center;
     #header-container {
-      max-width: 1200px;
-      min-width: 1200px;
+      // max-width: 1200px;
+      // min-width: 1200px;
+      // 斜体
+      min-width: calc(54rem + 500px);
+      display: flex;
+      align-items: center;
       #title {
-        font-size: 5rem;
+        flex-basis: 54rem;
+        flex-shrink: 0;
+        // transform: scaleX(0.8);
+        font-size: 4.5rem;
         h1 {
+          transform: skewX(-8deg) scaleX(0.9);
+          transform-origin: 0 50%;
           margin-top: 1rem;
+          line-height: 6rem;
           &:last-of-type {
             margin-top: 0.5rem;
           }
         }
       }
+      #title-image {
+        width: 100%;
+        height: 100%;
+        max-width: 500px;
+        max-height: 500px;
+        transform: scale(1.2);
+        transform-origin: 50% 50%;
+        --animate-duration: 5s;
+        margin-left: -1rem;
+      }
       .subtitle {
+        transform: skewX(-8deg);
         font-size: 2.25rem;
         display: flex;
         align-items: center;

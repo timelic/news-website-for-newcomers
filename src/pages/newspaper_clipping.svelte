@@ -1,23 +1,18 @@
 <script lang="ts">
   import { onMount } from "svelte";
   onMount(() => {
-    const client = document.getElementById("app")!;
+    const client = document.getElementById("app");
     const el = document.getElementById("newspaper-clipping");
     const imgs = document.querySelectorAll<HTMLImageElement>(
       "#clippings-container img"
     );
     const text = document.getElementById("text")!;
     const scrollCb = () => {
-      const scrollTop = client.scrollTop;
-      const scrolled = Math.min(1, Math.max(0, scrollTop / el.offsetTop));
-
-      const startPos = 0.2,
-        endPos = 0.8;
-
+      const scrolled = client.scrollTop;
       imgs.forEach((img, i) => {
-        const step = (endPos - startPos) / 13;
-        const start = startPos + step * i,
-          end = startPos + step * (i + 1);
+        const step = (el.offsetHeight * 0.8) / 13;
+        const start = el.offsetTop - window.innerHeight * 0.8 + step * i,
+          end = el.offsetTop - window.innerHeight * 0.8 + step * (i + 1);
         const progress = Math.min(
           1,
           Math.max(0, (scrolled - start) / (end - start))
@@ -27,7 +22,7 @@
           img.style.display = "block";
         }
       });
-      if (scrolled >= 1) {
+      if (scrolled >= el.offsetTop) {
         client.removeEventListener("scroll", scrollCb);
         imgs.forEach((img) => {
           img.classList.remove("animate__fadeInUp");
@@ -35,10 +30,6 @@
         });
         text.style.opacity = "1";
         text.classList.add("animate__fadeInUp");
-        client.scrollTo({ top: el.offsetTop - 50 }); // ?
-        // setTimeout(() => {
-        //   el.setAttribute("style", "position: static !important");
-        // }, 100);
       }
     };
     client.addEventListener("scroll", scrollCb);
@@ -47,7 +38,6 @@
 
 <div id="newspaper-clipping">
   <div id="clippings-container">
-    <!-- 生成100个div -->
     {#each new Array(13) as _, i}
       <img
         class="clipping animate__animated"
@@ -68,15 +58,31 @@
 
 <style lang="scss">
   #newspaper-clipping {
-    // position: sticky;
-    // top: 0;
     display: flex;
     height: 90vh;
     background-color: #ffaeae;
-    background-image: url("../assets/bg.jpg");
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      transition: 0.3s;
+      background-image: url("../assets/bg.jpg");
+      background: linear-gradient(
+        90deg,
+        hsl(0deg 100% 92%) 0%,
+        hsl(295deg 100% 97%) 100%
+      );
+      background-size: cover;
+    }
   }
   #clippings-container {
     max-width: 1200px;
@@ -154,10 +160,11 @@
 
     #text {
       font-family: var(--theme-font);
-      font-size: 4rem;
-      line-height: 5.5rem;
-      color: white;
-      text-shadow: 0 0 5px #ff525294;
+      font-size: 3.5rem;
+      line-height: 5rem;
+      color: black;
+      scale: 0.95 1;
+      // text-shadow: 0 0 5px #ff525294;
       opacity: 0;
       display: flex;
       flex-direction: column;
