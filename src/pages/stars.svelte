@@ -65,17 +65,13 @@
 <style lang="scss">
   section {
     position: relative;
-    height: 50vh;
-    background: linear-gradient(
-      90deg,
-      rgb(240, 227, 202) 0%,
-      rgb(241, 218, 255) 100%
-    );
+    height: 60vh;
+    background: var(--pink-bg);
     .title {
       font-size: 4rem;
       font-weight: 600;
       text-align: center;
-      line-height: 50vh;
+      line-height: 60vh;
     }
     .dialog {
       position: absolute;

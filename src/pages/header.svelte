@@ -10,7 +10,7 @@
     const num = document.getElementById("header-num");
     setInterval(() => {
       num.innerText = parseInt(battery.cycles).toString();
-    }, 1000 / 60);
+    }, (2 * 1000) / 60);
     anime({
       targets: battery,
       cycles: 5580000,

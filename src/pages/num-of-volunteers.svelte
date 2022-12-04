@@ -76,6 +76,7 @@
     const text = document.getElementById("num-of-volunteers-text");
     const cb1 = () => {
       if (client.scrollTop >= el.offsetTop - el.offsetHeight * 0.5) {
+        console.error("cb1");
         text.style.opacity = "1";
         text.classList.add("animate__fadeInUp");
         client.removeEventListener("scroll", cb1);
@@ -116,7 +117,7 @@
 
 <style lang="scss" global>
   #num-of-volunteers {
-    height: 800px;
+    height: 550px;
     background-color: #fff5f1;
     display: flex;
     flex-direction: column;
@@ -124,19 +125,20 @@
     justify-content: center;
     position: relative;
 
-    &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.5;
-      transition: 0.3s;
-      background-image: url("../assets/paper.jpg");
-      background-size: contain;
-    }
+    background: var(--pink-bg);
+    // &:before {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   left: 0;
+    //   top: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   opacity: 0.5;
+    //   transition: 0.3s;
+    //   background-image: url("../assets/paper.jpg");
+    //   background-size: contain;
+    // }
     &-chart-container {
       width: 800px;
       height: 500px;

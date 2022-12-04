@@ -35,11 +35,11 @@
 </script>
 
 <section id="waiting">
-  <div id="waiting-title">这儿需要加一个标题 不然不好看</div>
+  <!-- <div id="waiting-title">这儿需要加一个标题 不然不好看</div> -->
   <div id="waiting-text" class="animate__animated bg-card">
     <div>数据统计结果显示</div>
     <div>每1例成功的器官移植背后</div>
-    <div>就有29个在等待的人</div>
+    <div>就有<underline>29个</underline>在等待的人</div>
   </div>
   <div id="waiting-image-container">
     <img src="{img1}" class="animate__animated" alt="" />

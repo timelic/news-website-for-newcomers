@@ -33,7 +33,7 @@
         background-color: #ffaeae;
       }
       &b {
-        background-color: #ffe3e3;
+        background: var(--pink-bg);
       }
       &c {
         background-color: #f5f5f5;

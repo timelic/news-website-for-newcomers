@@ -6,7 +6,10 @@
     const imgs = document.querySelectorAll<HTMLImageElement>(
       "#clippings-container img"
     );
-    const text = document.getElementById("text")!;
+    const texts = document.querySelectorAll<HTMLImageElement>("#text div");
+    // change NodeList to HTMLElement[]
+    const textsArr: HTMLImageElement[] = Array.prototype.slice.call(texts);
+
     const scrollCb = () => {
       const scrolled = client.scrollTop;
       imgs.forEach((img, i) => {
@@ -28,8 +31,13 @@
           img.classList.remove("animate__fadeInUp");
           img.classList.add("animate__fadeOutUp");
         });
-        text.style.opacity = "1";
-        text.classList.add("animate__fadeInUp");
+        document.getElementById("text").style.opacity = "1";
+        // texts.classList.add("animate__fadeInUp");
+        textsArr.forEach((text, i) => {
+          setTimeout(() => {
+            text.classList.add("animate__fadeInUp");
+          }, 200 * i);
+        });
       }
     };
     client.addEventListener("scroll", scrollCb);
@@ -47,11 +55,13 @@
       />
     {/each}
     <div id="text" class="animate__animated">
-      <div>大爱如潮 无碍奔涌</div>
-      <div>在一次次的生命接力中</div>
-      <div>在一次次奔走传递间</div>
-      <div>越来越多人以<underline class="sky">勇气和真诚</underline>去奉献</div>
-      <div>最无价的生命之礼</div>
+      <div class="animate__animated">大爱如潮 无碍奔涌</div>
+      <div class="animate__animated">在一次次的生命接力中</div>
+      <div class="animate__animated">在一次次奔走传递间</div>
+      <div class="animate__animated">
+        越来越多人以<underline class="sky">勇气和真诚</underline>去奉献
+      </div>
+      <div class="animate__animated">最无价的生命之礼</div>
     </div>
   </div>
 </div>
@@ -76,11 +86,7 @@
       opacity: 1;
       transition: 0.3s;
       background-image: url("../assets/bg.jpg");
-      background: linear-gradient(
-        90deg,
-        hsl(0deg 100% 92%) 0%,
-        hsl(295deg 100% 97%) 100%
-      );
+      background: var(--pink-bg);
       background-size: cover;
     }
   }
@@ -165,10 +171,14 @@
       color: black;
       scale: 0.95 1;
       // text-shadow: 0 0 5px #ff525294;
-      opacity: 0;
+      // opacity: 0;
       display: flex;
       flex-direction: column;
+      transition: 0.2s;
       justify-content: center;
+      div {
+        opacity: 0;
+      }
     }
   }
 </style>

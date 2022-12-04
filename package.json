@@ -26,6 +26,7 @@
     "@antv/g2plot": "^2.4.22",
     "animate.css": "^4.1.1",
     "animejs": "^3.2.1",
-    "classnames": "^2.3.2"
+    "classnames": "^2.3.2",
+    "danmu.js": "^1.1.6"
   }
 }

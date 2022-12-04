@@ -53,6 +53,8 @@
         position: "top",
       },
       smooth: true,
+      // colorField: 'type', // 部分图表使用 seriesField
+      color: ["#E97777", "#FF9F9F", "#C0EEE4", "#FFDDD2"],
     });
     onSee("organ-line-container", () => linePlot.render());
     const organPieData = [
@@ -72,6 +74,7 @@
         type: "spider",
         content: "{name} {percentage}",
       },
+      color: ["#E97777", "#FF9F9F", "#FF8DC7", "#FFDDD2"],
       interactions: [{ type: "pie-legend-active" }, { type: "element-active" }],
     });
 
@@ -95,17 +98,32 @@
   </section>
   <div style="text-align: center">图表缺省</div>
   <section class="chart">
-    “2015-2020年，我国完成公民逝世后器官捐献累计29334例，
-    每百万人口器官捐献率（PMP）从2015年的2.01升至2021年的3.63”
+    <iframe
+      src="https://dycharts.com/xshow/index.html?id=c_98cafa44ae20768ee91144b295fda893"
+      width="600"
+      height="550"
+      scrolling="no"
+      frameborder="0"
+      title=""
+      style="margin-bottom: 2rem"></iframe>
+    <div style="margin-bottom: 1rem">
+      2015-2020年，我国完成公民逝世后器官捐献累计<underline>29334例</underline
+      >，
+    </div>
+    <div>
+      每百万人口器官捐献率（PMP）从2015年的2.01升至2021年的<underline
+        >3.63</underline
+      >
+    </div>
   </section>
   <section class="text-align">
     <div>2021年</div>
-    <div>我国实施肾脏移手术12039例</div>
-    <div>实施肝脏移植手术5834例</div>
-    <div>肺脏775例</div>
-    <div>心脏738例</div>
+    <div>我国实施肾脏移手术<underline>12039例</underline></div>
+    <div>实施肝脏移植手术<underline>5834例</underline></div>
+    <div>肺脏<underline>775例</underline></div>
+    <div>心脏<underline>738例</underline></div>
     <div>……</div>
-    <div>器官捐献事业又迎来了捐献数量的巨大增长</div>
+    <div>器官捐献事业<underline>又</underline>迎来了捐献数量的巨大增长</div>
     <div>在如潮大爱中又登上了一个崭新阶段</div>
   </section>
 
@@ -125,12 +143,11 @@
   </section> -->
 
   <section class="text-align">
-    <div>【中国人体器官捐献与移植委员会主任委员黄洁夫表示】</div>
     <div>自2015年公民志愿捐献成为</div>
     <div>我国器官移植唯一合法来源以来</div>
-    <div>我国器官捐献数量每年平均增长20%</div>
+    <div>我国器官捐献数量每年平均<underline>增长20%</underline></div>
     <div>在器官捐献、移植数量两项指标</div>
-    <div>均居世界第二位</div>
+    <div><underline>均居世界第二位</underline></div>
   </section>
 </div>
 
@@ -175,11 +192,7 @@
     padding: 2rem 0;
   }
   .pink-bg {
-    background: linear-gradient(
-      90deg,
-      hsla(298, 68%, 90%, 1) 0%,
-      hsla(30, 82%, 91%, 1) 100%
-    );
+    background: var(--pink-bg);
   }
   .chart {
     display: flex;

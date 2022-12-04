@@ -20,8 +20,8 @@
       document
         .getElementById("circle-30w")
         .setAttribute("style", `--progress: ${progress};`);
-      if (progress >= 1 / 2 && progress < 3 / 4) {
-        imgs[0].style.opacity = "0";
+      if (progress >= 1 / 3 && progress < 3 / 4) {
+        // imgs[0].style.opacity = "0";
         imgs[1].style.opacity = "1";
         if (!text.classList.contains("animate__fadeInUp"))
           text.classList.add("animate__fadeInUp");
@@ -39,12 +39,12 @@
 </script>
 
 <section id="circle-30w">
-  <div id="circle-30w-title">这儿需要加一个标题 不然不好看</div>
+  <!-- <div id="circle-30w-title">这儿需要加一个标题 不然不好看</div> -->
   <div id="circle-30w-text" class="animate__animated bg-card">
     <div>在中国</div>
-    <div>每年有30万患者可以通过器官移植重获新生</div>
+    <div>每年有<underline>30万</underline>患者可以通过器官移植重获新生</div>
     <div>但目前</div>
-    <div>每年只能进行2万多例器官移植手术</div>
+    <div>每年只能进行<underline>2万多例</underline>器官移植手术</div>
   </div>
   <div id="circle-30w-image-container">
     <img src="{img1}" class="animate__animated" alt="30万小圈圈" />
@@ -87,9 +87,7 @@
       height: calc(var(--width) * 14 / 19);
       position: relative;
       img {
-        &:not(:first-child) {
-          opacity: 0;
-        }
+        opacity: 0;
         transition: 0.6s;
         max-width: 100%;
         max-height: 100%;

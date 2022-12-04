@@ -47,9 +47,9 @@
 <section id="statistical-data">
   <div id="statistical-data-text" class="animate__animated bg-card">
     <div>截至2021年底</div>
-    <div>我国累计完成捐献3.7万余例</div>
-    <div>捐献器官11.3万余个</div>
-    <div>挽救了11万余名器官衰竭患者的生命</div>
+    <div>我国累计完成捐献<underline>3.7万余例</underline></div>
+    <div>捐献器官<underline>11.3万余个</underline></div>
+    <div>挽救了<underline>11万余名器</underline>官衰竭患者的生命</div>
   </div>
   <div id="statistical-data-image-container">
     <div>

@@ -63,6 +63,7 @@
   <!-- 头图 -->
   <Header />
   <HeaderSmallText />
+  <Stars />
   <!-- 剪报 -->
   <NumOfVolunteers />
   <StatisticalData />
@@ -70,7 +71,6 @@
   <WaitingForOrgan />
   <WhatHaveWeDone />
   <NewspaperClipping />
-  <Stars />
   <WhatBringsDonationIncrement />
   <Footer />
 </main>
@@ -78,17 +78,18 @@
 <style lang="scss" global>
   // 漂亮的下划线
   underline {
-    background-image: linear-gradient(120deg, #fac784 0%, #f48f8f 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0.2em;
-    background-position: 0 88%;
-    transition: background-size 0.2s;
-    &:hover {
-      background-size: 100% 88%;
-    }
-    &.sky {
-      background-image: linear-gradient(120deg, #84d5fa 0%, #8fa2f4 100%);
-    }
+    color: rgb(245, 89, 89);
+    // background-image: linear-gradient(120deg, #fac784 0%, #f48f8f 100%);
+    // background-repeat: no-repeat;
+    // background-size: 100% 0.2em;
+    // background-position: 0 88%;
+    // transition: background-size 0.2s;
+    // &:hover {
+    //   background-size: 100% 88%;
+    // }
+    // &.sky {
+    //   background-image: linear-gradient(120deg, #84d5fa 0%, #8fa2f4 100%);
+    // }
   }
   #navigator {
     height: 4rem;
