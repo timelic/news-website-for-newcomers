@@ -7,6 +7,7 @@
   import greenChannel1 from "../assets/green-channel-1.gif";
   import greenChannel2 from "../assets/green-channel-2.gif";
   import DanmuJs from "danmu.js";
+  import organDonate from "../assets/organ-donate.gif";
 
   function textAppear(textElId: string) {
     onMount(() => {
@@ -354,8 +355,13 @@
     <div>确保这份重生的礼物能够真正递送到需要的人身边</div>
   </div>
 </section>
-<div>流程图？？？</div>
-<section class="text-align text-left">
+<section class="text-align text-left" style="padding-top: 0;">
+  <img
+    src="{organDonate}"
+    style="max-width: 1000px; background: white;"
+    alt=""
+    srcset=""
+  />
   <div>
     但是，亲友这份期待留给世界的最后一份礼物，却无法承担太久的等候。事实上，器官捐献不仅是一场爱的接力，更是一场时间的赛跑。
   </div>
