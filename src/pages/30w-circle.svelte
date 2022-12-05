@@ -20,7 +20,7 @@
       document
         .getElementById("circle-30w")
         .setAttribute("style", `--progress: ${progress};`);
-      if (progress >= 1 / 3 && progress < 3 / 4) {
+      if (progress >= 0 && progress < 3 / 4) {
         // imgs[0].style.opacity = "0";
         imgs[1].style.opacity = "1";
         if (!text.classList.contains("animate__fadeInUp"))
