@@ -1,6 +1,11 @@
 <script lang="ts">
+  import { onSee } from "@utils";
   import { onMount } from "svelte";
   onMount(() => {
+    const audio = document.getElementById(
+      "newspaper-clipping-audio"
+    ) as HTMLAudioElement;
+    onSee("newspaper-clipping-audio", () => {});
     const client = document.getElementById("app");
     const el = document.getElementById("newspaper-clipping");
     const imgs = document.querySelectorAll<HTMLImageElement>(
@@ -9,9 +14,14 @@
     const texts = document.querySelectorAll<HTMLImageElement>("#text div");
     // change NodeList to HTMLElement[]
     const textsArr: HTMLImageElement[] = Array.prototype.slice.call(texts);
-
+    let audioPlayed = false;
     const scrollCb = () => {
       const scrolled = client.scrollTop;
+      if (scrolled >= el.offsetTop - window.innerHeight && !audioPlayed) {
+        audio.currentTime = 0;
+        audio.muted = false;
+        audioPlayed = true;
+      }
       imgs.forEach((img, i) => {
         const step = (el.offsetHeight * 0.6) / 13;
         const start = el.offsetTop - window.innerHeight * 0.8 + step * i,
@@ -44,6 +54,8 @@
   });
 </script>
 
+<audio id="newspaper-clipping-audio" src="/b.mp3" controls="{false}" muted
+></audio>
 <div id="newspaper-clipping">
   <div id="clippings-container">
     {#each new Array(13) as _, i}

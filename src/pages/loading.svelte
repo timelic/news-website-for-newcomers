@@ -1,4 +1,28 @@
-<section>
+<script lang="ts">
+  import { eventbus } from "@utils";
+  import { onMount } from "svelte";
+
+  export let loaded = false;
+  onMount(() => {
+    // 点击开始 隐藏整个section
+    const start = document.getElementById("start");
+    start?.addEventListener("click", () => {
+      const section = document.getElementById("loading");
+      section.style.display = "none";
+      eventbus.emit("start");
+
+      const audio1 = document.getElementById("stars-audio") as HTMLAudioElement;
+      // audio2 id newspaper-clipping-audio
+      const audio2 = document.getElementById(
+        "newspaper-clipping-audio"
+      ) as HTMLAudioElement;
+      audio1.play();
+      audio2.play();
+    });
+  });
+</script>
+
+<section id="loading">
   <div class="book">
     <div class="inner">
       <div class="left"></div>
@@ -26,10 +50,22 @@
       <li></li>
     </ul>
   </div>
-  <div>loading</div>
+  {#if !loaded}
+    <div>loading...</div>
+  {/if}
+  <div style="opacity: {Number(loaded)}" id="start">开始</div>
 </section>
 
 <style lang="scss">
+  #start {
+    background-color: #eee;
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    color: black;
+    line-height: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
   section {
     z-index: 999;
     position: fixed;

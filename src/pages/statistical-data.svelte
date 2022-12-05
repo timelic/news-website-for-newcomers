@@ -34,6 +34,7 @@
       if (progress >= 1 / 3 && progress < 1) {
         if (!text.classList.contains("animate__fadeInUp"))
           text.classList.add("animate__fadeInUp");
+        (document.getElementById("stars-audio") as HTMLAudioElement).pause();
       } else if (progress >= 1) {
         if (!text.classList.contains("animate__fadeOutUp"))
           text.classList.add("animate__fadeOutUp");
@@ -86,7 +87,7 @@
     justify-content: center;
     // align-items: center;
     padding-top: 10vh;
-    height: 60vh;
+    height: 65vh;
     position: relative;
     background: var(--pink-bg);
   }

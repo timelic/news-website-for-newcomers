@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onSee } from "@utils";
+  import { onSee, eventbus } from "@utils";
   import anime from "animejs";
   import { onMount } from "svelte";
   const posStaggerDistance = 8;
@@ -14,31 +14,43 @@
       loop: true,
       direction: "alternate",
     });
+    const audio = document.getElementById("stars-audio") as HTMLAudioElement;
+    // eventbus.on("start", audio.play);
     onSee("stars", () => {
-      const timestamps = [1000, 3000, 5000, 7000, 9000];
-      timestamps.forEach((t, i) => {
+      audio.currentTime = 0;
+      audio.muted = false;
+
+      // play audio
+      // audio.play();
+      const timestamps = [
+        [0, 5000],
+        [19000, 25000],
+        [25000, 32000],
+        [39000, 44000],
+      ];
+      timestamps.forEach(([start, end], i) => {
         setTimeout(async () => {
-          document
-            .querySelector(`.dialog:nth-of-type(${i})`)
-            ?.classList.remove("active");
           document
             .querySelector(`.dialog:nth-of-type(${i + 1})`)
             ?.classList.add("active");
-        }, t);
+        }, start);
+        setTimeout(async () => {
+          document
+            .querySelector(`.dialog:nth-of-type(${i + 1})`)
+            ?.classList.remove("active");
+        }, end);
       });
-
-      setTimeout(() => {}, 2000);
-      setTimeout(() => {}, 3000);
-      setTimeout(() => {}, 4000);
     });
   });
 </script>
 
 <section id="stars">
+  <audio id="stars-audio" src="/a.mp3" muted="{true}" controls="{false}"
+  ></audio>
   <div class="dialog">
     <div class="inner">
-      <div>我认为他不曾离开我</div>
-      <div>我也会永远爱他</div>
+      <div>以勇气和真爱</div>
+      <div>为他人换取一份希望</div>
     </div>
   </div>
   <div class="dialog">
@@ -55,8 +67,8 @@
   </div>
   <div class="dialog">
     <div class="inner">
-      <div>以勇气和真爱</div>
-      <div>为他人换取一份希望</div>
+      <div>我认为他不曾离开我</div>
+      <div>我也会永远爱他</div>
     </div>
   </div>
   <div class="title">点点星光，终能汇成璀璨星河</div>

@@ -96,7 +96,6 @@
     <div>我们见证至善至美的大爱</div>
     <div>也奔走在一次次平凡而生动的接力中</div>
   </section>
-  <div style="text-align: center">图表缺省</div>
   <section class="chart">
     <iframe
       src="https://dycharts.com/xshow/index.html?id=c_98cafa44ae20768ee91144b295fda893"

@@ -45,7 +45,7 @@
     });
   });
   onMount(() => {
-    document.getElementById("green-channel").onclick = () => {
+    document.getElementById("green-channel-btn").onclick = () => {
       document
         .getElementById("green-channel")
         .setAttribute("style", "--progress: 1");
@@ -90,6 +90,13 @@
       //bOffset: 1000, //可调节弹幕横向间隔（毫秒）
       defaultOff: true, //开启此项后弹幕不会初始化，默认初始化弹幕
     });
+    document.getElementById("legal-btn").onclick = () => {
+      document.getElementById("legal-btn").style.display = "none";
+      const elem = document
+        .getElementsByClassName("legal")
+        .item(0) as HTMLDivElement;
+      elem.style.display = "block";
+    };
   });
 </script>
 
@@ -110,8 +117,9 @@
       >由最初的不足一百人逐渐实现数十倍的增长。</underline
     >
   </div>
-  <div>而更值得欣慰的是，</div>
-  <div>“奔跑团”不断壮大的同时，也逐渐走上了规范管理、严格培训的道路。</div>
+  <div>
+    而更值得欣慰的是，“奔跑团”不断壮大的同时，也逐渐走上了规范管理、严格培训的道路。
+  </div>
   <div>
     2010年6月，中国红十字会总会和卫生部在深圳联合举办了第一期人体器官捐献协调员培训班。
   </div>
@@ -154,6 +162,7 @@
   <div id="green-channel" style="--progress: 0">
     <img src="{greenChannel1}" alt="" srcset="" />
     <img src="{greenChannel2}" alt="" srcset="" />
+    <div id="green-channel-btn">点击切换绿色通道</div>
   </div>
   <!-- 3 -->
   <h2 class="red">3. 坚实的“承重墙”：医疗技术的提升</h2>
@@ -196,6 +205,7 @@
     2020年5月28日，十三届全国人大三次会议表决通过了《中华人民共和国民法典》，宣告中国“民法典时代”正式到来。其中，人格权独立成编，在第二章生命权、身体权和健康权中对遗体和人体器官、人体组织捐献做出明确规定，明确禁止人体买卖，是民法典中的亮点，也为器官捐献事业的发展又加固一层坚实的保护网。
   </div> -->
   <img id="timeline" src="{timeline}" alt="" />
+  <div id="legal-btn">《中华人民共和国民法典》</div>
   <div class="legal">
     <div class="legal-title">第一千零六条</div>
     完全民事行为能力人有权依法自主决定无偿捐献其人体细胞、人体组织、人体器官、遗体。任何组织或者个人不得强迫、欺骗、利诱其捐献。
@@ -247,12 +257,12 @@
       title=""></iframe>
   </div>
 
+  <h2 class="red">1.传统观念的影响</h2>
   <div>
-    1.传统观念的影响
     既往研究表明，中国PMP低很大程度上源于传统观念的影响。在中国传统观念中，死者应当入土为安，代代相传的传统观念成为维系家庭的情感联系，也在人们心中烙下深深的印记。所以很多人对于捐献自己的器官尚有不小的顾虑。而对于亲属的意愿，让刚失去亲人的家属接受则是难上加难。
   </div>
+  <h2 class="red">2.地区分布不均</h2>
   <div>
-    2.地区分布不均
     与此同时，全国各地具有移植资质的医院数量也分布不均。根据中华人民共和国国家卫生健康委员会2022年8月发布的数据，<underline
       >全国共有183家具备器官移植资格的医院</underline
     >，但是在数量上却存在显著的地区差异。
@@ -301,35 +311,37 @@
 </section>
 
 <div class="text-align">
-  <div>提及器官捐献，</div>
-  <div>有人觉得这是奉献，大爱无疆；</div>
-  <div>有人认为应该延续传统，入土为安……</div>
-  <div>在签署知情同意书那一刻，</div>
-  <div>我们总会以此作为最后的道别而哀痛万分。</div>
-  <div>犹豫、彷徨、不舍、悲痛......</div>
-  <div>是放下手中的笔，留住最后的不舍？</div>
-  <div>还是擦干泪水，尊重这份最后的爱传递下去？</div>
-  <div>一个又一个家属做出了他们的决定。</div>
+  <div>提及器官捐献</div>
+  <div>有人觉得这是奉献，大爱无疆</div>
+  <div>有人认为应该延续传统，入土为安</div>
+  <div>在签署知情同意书那一刻</div>
+  <div>我们总会以此作为最后的道别而哀痛万分</div>
+  <div>犹豫、彷徨、不舍、悲痛</div>
+  <div>是放下手中的笔，留住最后的不舍</div>
+  <div>还是擦干泪水，尊重这份最后的爱传递下去</div>
+  <div>一个又一个家属做出了他们的决定</div>
 </div>
-
-<section class="text-align text-left story">
-  <div>
+<section class="text-align">
+  <div class="italic">
     2020年，小溪的外公因为脑梗不幸去世。病情凶险又发展迅速，加上老人之前就有高血压等老年疾病，送到医院就收到了病危通知书，即便送到了杭州的省级医院也无力回天。整个家被这份突如其来的沉痛打击紧紧裹挟着。哀痛、不舍、痛哭，疾病和死亡似乎像一把无情的剪刀将亲人间灯火可温的血脉联系残忍剪断，家人们一时间都难以接受。
   </div>
-  <div>
+  <div class="italic">
     悲痛中，舅舅突然想起外公生前几次在看新闻报道时提出捐献器官的想法都被家人打断了。
   </div>
-  <div>“您现在不是挺健康的嘛？怎么想起说这个？”“好好的，说这话干什么？”</div>
-  <div>
+  <div class="italic">
+    “您现在不是挺健康的嘛？怎么想起说这个？”“好好的，说这话干什么？”
+  </div>
+  <div class="italic">
     而作为儿子，除了痛苦和悲伤，他也想帮父亲完成最后的心愿。他觉得，这是对逝者最后的尊重，更是生者唯一能做的事。所以，当父亲去世后，他决定代父亲正式向家人提出器官捐献的请求。
   </div>
-  <div>
+  <div class="italic">
     起初，受宗教信仰和传统观念的影响，外婆并不同意舅舅的请求。除了彼时失去伴侣的无助和悲伤，让她更不能接受与看似与传统观念和佛教信仰中遗体应该完整的观念相悖的事。
   </div>
-  <div>
+  <div class="italic">
     而此刻，和很多器官捐献志愿者家属一样，小溪一家面临两难的抉择，一端是传统与情感，一端是尊重与大爱。对于如何决定，究竟如何守护这份亲情，大家都在沉思......
   </div>
 </section>
+
 <section class="text-align">
   <div style="text-align: center">
     <div class="red-ques">这个决定意味着什么？</div>
@@ -385,14 +397,14 @@
   </div>
 </section>
 
-<section class="text-align text-left story">
-  <div>
+<section class="text-align">
+  <div class="italic">
     最后，舅舅还是说服了家人，外婆也选择尊重外公的心愿，因为她和外公一样，“希望能救一个是一个”。在全家达成帮助外公奔赴这场接力的共识后，舅舅第一时间与医院取得了联系。
   </div>
-  <div>
+  <div class="italic">
     虽然外公生前只是在新闻上看到有关器官捐献的报道，也只是在生前口头表达过关于器官捐献的强烈意愿，本人并没有确认签署志愿协议。但是舅舅还是在医院和工作人员的帮助下，完成评估、登记、确认等一系列流程，帮外公完成了最后的心愿。
   </div>
-  <div>
+  <div class="italic">
     最后，小希外公的眼角膜成功帮助一位患者重见光明。这位慈祥、温暖的长者也如愿在生命的最后为世界留下了一抹光亮。
   </div>
 </section>
@@ -474,6 +486,7 @@
     text-align: left !important;
   }
   .legal {
+    display: none;
     // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px;
     background-color: white;
     font-size: 1.2rem;
@@ -513,6 +526,8 @@
   }
   .italic {
     transform: skewX(-5deg);
+    font-family: var(--theme-font-regular);
+    font-size: 1.1rem;
   }
   .story {
     font-family: var(--theme-font-regular);
@@ -593,6 +608,30 @@
         opacity: calc(1 - var(--progress));
       }
     }
+    &-btn {
+      position: absolute;
+      top: 63%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      // border-radius: 50%;
+      width: fit-content;
+      height: fit-content;
+      padding: 0.5rem 2rem;
+      border-radius: 1rem;
+      background-color: rgba(255, 255, 255, 0.788);
+      backdrop-filter: blur(10px);
+      color: rgb(0, 0, 0);
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 40px -7px;
+      z-index: 99;
+      cursor: pointer;
+      transition: 0.3s;
+      opacity: calc(1 - var(--progress));
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+    }
   }
   .red {
     background: linear-gradient(
@@ -603,5 +642,18 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  #legal-btn {
+    background-color: rgba(255, 255, 255, 0.788);
+    width: fit-content;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 40px -7px;
+    }
   }
 </style>

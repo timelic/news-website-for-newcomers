@@ -46,9 +46,7 @@
 </script>
 
 <main>
-  {#if !hasLoadedFont}
-    <Loading />
-  {/if}
+  <Loading loaded="{hasLoadedFont}" />
 
   <div id="navigator">
     <div class="left">

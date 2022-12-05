@@ -28,7 +28,7 @@
       } else if (progress >= 1) {
         imgs[1].style.opacity = "0";
         imgs[2].style.opacity = "1";
-        document.getElementById("circle-30w-title").style.opacity = "1";
+        // document.getElementById("circle-30w-title").style.opacity = "1";
         if (!text.classList.contains("animate__fadeOutUp"))
           text.classList.add("animate__fadeOutUp");
         client.removeEventListener("scroll", cb);

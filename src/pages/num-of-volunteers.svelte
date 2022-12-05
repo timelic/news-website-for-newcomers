@@ -76,7 +76,6 @@
     const text = document.getElementById("num-of-volunteers-text");
     const cb1 = () => {
       if (client.scrollTop >= el.offsetTop - el.offsetHeight * 0.5) {
-        console.error("cb1");
         text.style.opacity = "1";
         text.classList.add("animate__fadeInUp");
         client.removeEventListener("scroll", cb1);
