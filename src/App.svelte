@@ -19,6 +19,8 @@
     const CACHE_NAME = "cache";
     const FONT_URL = "https://qiniu-1.lfcky.com/SourceHanSansCN-Medium.otf";
     const FONT_URL2 = "https://qiniu-1.lfcky.com/SourceHanSansCN-Regular.otf";
+    const FONT_URL3 =
+      "https://qiniu-1.lfcky.com/%E6%80%9D%E6%BA%90%E9%BB%91%E4%BD%93%20CN%20RegularItalic.ttf";
     const getFontBuffer = async (FONT_URL: string) => {
       const cache = await caches.open(CACHE_NAME);
       const resp = await cache.match(FONT_URL);
@@ -40,7 +42,11 @@
       "方正兰亭黑 Regular",
       await getFontBuffer(FONT_URL2)
     );
-    document.fonts.add(fontface).add(fontface2);
+    const fontface3 = new FontFace(
+      "方正兰亭黑 Regular Italic",
+      await getFontBuffer(FONT_URL3)
+    );
+    document.fonts.add(fontface).add(fontface2).add(fontface3);
     hasLoadedFont = true;
   })();
 </script>

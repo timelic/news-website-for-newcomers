@@ -5,7 +5,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: #030033;
+  color: #291826;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,6 +18,7 @@
   /* --theme-font: Smiley Sans; */
   --theme-font: Helvetica, "方正兰亭黑 Medium", "黑体";
   --theme-font-regular: Helvetica, "方正兰亭黑 Regular", "黑体";
+  --theme-font-regular-italic: Helvetica, "方正兰亭黑 Regular Italic", "黑体";
 
   --pink-bg: linear-gradient(
     90deg,

@@ -54,8 +54,12 @@
   });
 </script>
 
-<audio id="newspaper-clipping-audio" src="/b.mp3" controls="{false}" muted
-></audio>
+<audio
+  id="newspaper-clipping-audio"
+  style="width: 0; height: 0;"
+  src="/b.mp3"
+  controls="{false}"
+  muted></audio>
 <div id="newspaper-clipping">
   <div id="clippings-container">
     {#each new Array(13) as _, i}

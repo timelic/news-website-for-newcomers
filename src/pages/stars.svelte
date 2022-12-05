@@ -45,8 +45,12 @@
 </script>
 
 <section id="stars">
-  <audio id="stars-audio" src="/a.mp3" muted="{true}" controls="{false}"
-  ></audio>
+  <audio
+    id="stars-audio"
+    style="width: 0; height: 0;"
+    src="/a.mp3"
+    muted="{true}"
+    controls="{false}"></audio>
   <div class="dialog">
     <div class="inner">
       <div>以勇气和真爱</div>
@@ -76,23 +80,24 @@
 
 <style lang="scss">
   section {
+    --height: 90vh;
     position: relative;
-    height: 60vh;
+    height: var(--height);
     background: var(--pink-bg);
     .title {
       font-size: 4rem;
       font-weight: 600;
       text-align: center;
-      line-height: 60vh;
+      line-height: var(--height);
     }
     .dialog {
       position: absolute;
       left: 50%;
       top: 50%;
       &.active .inner {
-        background-color: rgb(0, 119, 255);
+        background-color: #ff5656;
         color: white;
-        box-shadow: 0 10px 20px -5px rgba(0, 73, 156, 0.397);
+        box-shadow: 0 10px 20px -5px rgba(156, 0, 0, 0.397);
       }
       .inner {
         transition: 0.3s;

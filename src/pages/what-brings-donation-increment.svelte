@@ -361,7 +361,6 @@
     <div class="space"></div>
     <div class="red-ques">这些人是如何接受器官的呢？</div>
     <div>在中国</div>
-    <div>一颗心、两叶肺、一个胰腺」</div>
     <div>器官捐献的完成不只需要本人生前的移植意愿</div>
     <div>也需要在进行手术前完成一系列的流程</div>
     <div>确保这份重生的礼物能够真正递送到需要的人身边</div>
@@ -525,15 +524,18 @@
     }
   }
   .italic {
-    transform: skewX(-5deg);
-    font-family: var(--theme-font-regular);
+    // transform: skewX(-5deg);
+    font-family: var(--theme-font-regular-italic);
     font-size: 1.1rem;
+    text-align: left;
+    color: rgb(0, 0, 0);
   }
   .story {
     font-family: var(--theme-font-regular);
     font-size: 1.1rem;
     & > div {
-      transform: skewX(-5deg);
+      // transform: skewX(-5deg);
+      font-family: var(--theme-font-regular-italic);
       // font-style: oblique;
     }
   }

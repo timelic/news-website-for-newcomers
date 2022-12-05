@@ -122,7 +122,7 @@
     <div>肺脏<underline>775例</underline></div>
     <div>心脏<underline>738例</underline></div>
     <div>……</div>
-    <div>器官捐献事业<underline>又</underline>迎来了捐献数量的巨大增长</div>
+    <div>器官捐献事业又迎来了捐献数量的巨大增长</div>
     <div>在如潮大爱中又登上了一个崭新阶段</div>
   </section>
 

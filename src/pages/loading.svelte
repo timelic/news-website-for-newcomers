@@ -18,6 +18,9 @@
       ) as HTMLAudioElement;
       audio1.play();
       audio2.play();
+      console.error("audio1", audio1);
+      console.error("audio2", audio2);
+      console.error("play audio1 and audio2");
     });
   });
 </script>
