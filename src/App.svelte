@@ -82,7 +82,7 @@
 <style lang="scss" global>
   // 漂亮的下划线
   underline {
-    color: rgb(245, 89, 89);
+    color: #b90000;
     // background-image: linear-gradient(120deg, #fac784 0%, #f48f8f 100%);
     // background-repeat: no-repeat;
     // background-size: 100% 0.2em;

@@ -381,7 +381,7 @@
 <section class="text-align text-left" style="padding-top: 0;">
   <img
     src="{organDonate}"
-    style="max-width: 1000px; background: white;"
+    style="max-width: 851px; background: white;"
     alt=""
     srcset=""
   />
@@ -604,17 +604,17 @@
     }
   }
   #timeline {
-    width: 1000px;
-    max-width: 1000px;
+    width: 851px;
+    max-width: 851px;
   }
   #green-channel {
     position: relative;
-    height: calc(1000px * 900 / 1600);
+    height: calc(851px * 900 / 1600);
     cursor: pointer;
     img {
       position: absolute;
-      width: 1000px;
-      max-width: 1000px;
+      width: 851px;
+      max-width: 851px;
       transition: 0.3s;
       &:nth-last-of-type(1) {
         opacity: calc(var(--progress));

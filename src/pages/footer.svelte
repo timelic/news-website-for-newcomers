@@ -58,13 +58,13 @@
     background-color: rgb(24, 24, 24);
     color: white;
     line-height: 2.5rem;
-    padding: 4rem calc((100vw - 1000px) / 2);
+    padding: 4rem calc((100vw - 851px) / 2);
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 1rem;
     .a {
-      width: 1000px;
+      width: 851px;
       & > div {
         flex-grow: 1;
       }
