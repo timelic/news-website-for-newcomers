@@ -194,6 +194,7 @@
     background: var(--pink-bg);
   }
   .chart {
+    mix-blend-mode: darken;
     display: flex;
     flex-direction: column;
     align-items: center;
