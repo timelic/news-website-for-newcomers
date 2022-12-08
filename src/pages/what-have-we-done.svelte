@@ -84,7 +84,7 @@
 
 <section id="what-have-we-done" style="--progress: 0">
   <div id="what-have-we-done-text" class="animate__animated">
-    而我们，做了什么？
+    滴水成河：34,606次真爱递送
   </div>
 </section>
 
@@ -126,7 +126,7 @@
     <div>在如潮大爱中又登上了一个崭新阶段</div>
   </section>
 
-  <section class="chart">
+  <section class="chart" style="mix-blend-mode: unset;">
     <div id="organ-pie-container" class="chart-content"></div>
     <div id="organ-line-container" class="chart-content"></div>
   </section>
@@ -211,7 +211,7 @@
         border-bottom-right-radius: 0.5rem;
       }
       overflow: hidden;
-      background-color: white;
+      // background-color: white;
       width: 800px;
     }
     .chart-content {

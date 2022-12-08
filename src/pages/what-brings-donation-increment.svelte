@@ -31,90 +31,17 @@
   textAppear("what-difficulty-we-face");
   textAppear("what-else-we-can-do");
   onMount(() => {
-    onSee("last", () => {
-      // 用animejs 让文字逐行出现
-      anime({
-        targets: "#last>div",
-        opacity: 1,
-        translateY: [100, 0],
-        scale: 1,
-        easing: "easeOutExpo",
-        duration: 1000,
-        delay: anime.stagger(100),
-      });
-    });
-  });
-  onMount(() => {
     document.getElementById("green-channel-btn").onclick = () => {
       document
         .getElementById("green-channel")
         .setAttribute("style", "--progress: 1");
     };
   });
-  onMount(() => {
-    let danmu = new DanmuJs({
-      container: document.getElementById("last"), //弹幕容器，该容器发生尺寸变化时会自动调整弹幕行为
-      containerStyle: {
-        //弹幕容器样式
-        zIndex: 100,
-      },
-      area: {
-        //弹幕显示区域
-        start: 0, //区域顶部到播放器顶部所占播放器高度的比例
-        end: 1, //区域底部到播放器顶部所占播放器高度的比例
-        lines: undefined, // 弹幕虚拟轨道显示行数。当指定行数时，显示范围 start/end 不生效；当弹幕字体大小超过所需要的总虚拟轨道数时，弹幕也不会出现在轨道上，因此请设置好弹幕fontSize及影响弹幕高度的其他样式，让弹幕和轨道高度匹配
-      },
-      channelSize: 20, // 轨道大小
-      mouseControl: true, // 打开鼠标控制, 打开后可监听到 bullet_hover 事件。danmu.on('bullet_hover', function (data) {})
-      mouseControlPause: false, // 鼠标触摸暂停。mouseControl: true 生效
-      //bOffset: 1000, //可调节弹幕横向间隔（毫秒）
-    });
-    const danmus = [
-      "“虽然心里会难过，但也是为国家做贡献，医学发达后，受益的是子孙后代。”",
-      "“或许通过这种方式，能将妹妹的善良美好继续留在人间，也希望妹妹以这种方式‘活着’。”",
-      "“我们正经历失去亲人的痛苦，虽有万分不舍，但希望小桐的生命能够得到另一种方式的延续，为其他深受疾病折磨的家庭带去生的希望。”",
-      "“没有捐献，哪有国家医疗水平的提升。我们老两口捐献遗体，也是想百年后能为党和国家做最后一点贡献。”",
-      "“母亲一生朴素，非常善良、有爱心，邻里关系非常好。10多年前她就咨询过遗体捐献相关事宜，无偿捐献遗体是母亲一直以来的心愿。”",
-      "“我也是一名退役军人，很早以前就签了捐献遗体的志愿书，我也一直给我的儿子说，等我不在了你就把我的遗体捐献给国家，不给社会、家庭增加负担，没想到我的儿子却走在了我的前面……”",
-      "“爸爸，您在我的出生证上签字，我却在您的器官捐献同意书上签字……”",
-      "“人民育我终一生，情深似海难回报。愿将遗体捐医学，聊为民利尽绵薄。”",
-      "“人总是有这么一天，其实我也算不上什么奉献，想到哪儿就做到哪儿，就想临终时把遗体捐出去。”",
-      "“生不带来，死不带去，如果在生命结束后还能为医学献力，难道不是一种最大的圆满？”",
-    ];
-    let i = 0;
-    function getNextDanmu() {
-      // if i is the entire length of danmus, set i to 0
-      if (i === danmus.length) {
-        i = 0;
-      }
-      return danmus[i++];
-    }
-    setInterval(() => {
-      const d = getNextDanmu();
-      danmu.sendComment({
-        //发送弹幕
-        duration: 15000,
-        id: d,
-        txt: d,
-        style: {
-          fontSize: "20px",
-        },
-      });
-    }, Math.random() * 3000);
-
-    document.getElementById("legal-btn").onclick = () => {
-      document.getElementById("legal-btn").style.display = "none";
-      const elem = document
-        .getElementsByClassName("legal")
-        .item(0) as HTMLDivElement;
-      elem.style.display = "block";
-    };
-  });
 </script>
 
 <section id="what-brings-donation-increment" style="--progress: 0">
   <div id="what-brings-donation-increment-text" class="animate__animated">
-    是什么带来了捐献数量的增长？
+    步履不停：10年间全力护跑
   </div>
 </section>
 
@@ -140,7 +67,7 @@
       >三十余期</underline
     >全国人体器官捐献协调员培训班。
   </div>
-  <img style="margin: 0 100px;" id="runners" src="{runners}" alt="" srcset="" />
+  <img id="runners" src="{runners}" alt="" srcset="" />
   <div style="text-align: center; font-size: 1.1rem;">
     全国器官捐献协调员培训情况
   </div>
@@ -187,6 +114,23 @@
     与此同时，为了更大程度激发捐献器官的医疗价值，许多医疗团队不断攻坚克难，器官移植医疗质量也不断完善，器官保存于供体器官维护技术不断改进，术后配套技术也不断完善，<underline
       >1年和5年术后存活率已达世界先进水平之列</underline
     >。
+  </div>
+
+  <div class="chart" id="silk">
+    <iframe
+      src="https://dycharts.com/xshow/index.html?id=c_de9ab65860b6586ba6cc51aabf83b5d2"
+      width="600"
+      height="350"
+      scrolling="no"
+      frameborder="0"
+      title=""></iframe>
+    <iframe
+      src="https://dycharts.com/xshow/index.html?id=c_235b347e2f1979a45c0576657e0a2a5a"
+      width="600"
+      height="350"
+      scrolling="no"
+      frameborder="0"
+      title=""></iframe>
   </div>
   <!-- 4 -->
   <h2 class="red">4.坚实的“保护网”：相关法律法规的完善和落实</h2>
@@ -243,7 +187,7 @@
 
 <section id="what-difficulty-we-face" style="--progress: 0">
   <div id="what-difficulty-we-face-text" class="animate__animated">
-    我们面临什么困难？
+    道阻意坚
   </div>
 </section>
 
@@ -317,18 +261,19 @@
 </section>
 
 <section id="what-else-we-can-do" style="--progress: 0">
-  <div id="what-else-we-can-do-text" class="animate__animated">
-    我们还能做什么？
-  </div>
+  <div id="what-else-we-can-do-text" class="animate__animated">生死时速</div>
 </section>
 
 <div class="text-align">
   <div>提及器官捐献</div>
   <div>有人觉得这是奉献，大爱无疆</div>
   <div>有人认为应该延续传统，入土为安</div>
+  <div>……</div>
   <div>在签署知情同意书那一刻</div>
   <div>我们总会以此作为最后的道别而哀痛万分</div>
+  <div></div>
   <div>犹豫、彷徨、不舍、悲痛</div>
+  <div>……</div>
   <div>是放下手中的笔，留住最后的不舍</div>
   <div>还是擦干泪水，尊重这份最后的爱传递下去</div>
   <div>一个又一个家属做出了他们的决定</div>
@@ -392,7 +337,7 @@
     医学上，<underline>通常以“热缺血时间”表示脑死亡后器官可存活的时间</underline
     >。从器官捐献者心脏停跳到将器官切取完成，进行冷灌注（捐献器官用器官保存液进行灌注，利于保持移植物的活性）这段时间称为热缺血时间。热缺血时，虽然血流中断但移植物的组织细胞仍继续代谢，期间最易发生移植物缺血的严重后果。
   </div>
-  <div class="chart">
+  <div class="chart" style="transform: scale(0.8); margin: -50px 0;">
     <iframe
       src="https://dycharts.com/xshow/index.html?id=c_d0f8dcf186d209acc74f0b184ee2880c"
       width="600"
@@ -428,7 +373,6 @@
   <div>爱有回音，爱与勇气，</div>
   <div>同频搏动，定会战胜疾病。</div>
 </section>
-<section class="text-align" id="last"></section>
 
 <style lang="scss">
   #what-brings-donation-increment::before {
@@ -530,7 +474,7 @@
       box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
       @for $i from 0 through 3 {
         &:nth-of-type(#{$i + 1}) {
-          margin-left: calc(8rem * #{$i});
+          margin-left: calc(5.1rem * #{$i});
         }
       }
     }
@@ -578,31 +522,7 @@
     widows: 200px;
     height: 3rem;
   }
-  #last {
-    position: relative;
-    color: white;
-    div {
-      z-index: 99;
-      opacity: 0;
-      transform: scale(1.2);
-    }
-    background: none;
-    height: 60vh;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("../assets/last.jpeg");
-      background-size: cover;
-      background-position: center;
-      filter: brightness(0.3);
-      // opacity: 0.8;
-      z-index: -1;
-    }
-  }
+
   #timeline {
     width: 851px;
     max-width: 851px;
@@ -669,6 +589,14 @@
     &:hover {
       background-color: rgba(255, 255, 255, 0.9);
       box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 40px -7px;
+    }
+  }
+  #silk {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    iframe {
+      // transform: scale(0.8);
     }
   }
 </style>

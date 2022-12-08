@@ -8,13 +8,15 @@
   export let paddingBottom: string = "2rem";
   export let noBg: boolean = false;
   $: noBgClass = noBg ? "no-bg" : "";
+  export let outerStyle: string = "";
+  export let innerStyle: string = "";
 </script>
 
 <section
   class="{classnames(bgClass, noBgClass)}"
-  style="--paddingBottom: {paddingBottom}"
+  style="--paddingBottom: {paddingBottom}; {outerStyle}"
 >
-  <div class="{fontSizeClass}">
+  <div class="{fontSizeClass}" style="{innerStyle}">
     {text}
   </div>
   <slot />

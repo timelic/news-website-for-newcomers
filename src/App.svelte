@@ -13,6 +13,14 @@
 
   import ThirtyWCircle from "./pages/30w-circle.svelte";
 
+  import Danmu from "./pages/danmu.svelte";
+  // two-block
+  import TwoBlock from "./pages/two-block.svelte";
+  import TextAlign from "./pages/text-align.svelte";
+
+  import MenuSvg from "./assets/MenuOutline.svg";
+
+  import { onMount } from "svelte";
   // 下载字体资源 svelte居然不允许顶层await
   let hasLoadedFont = false;
   (async () => {
@@ -49,6 +57,34 @@
     document.fonts.add(fontface).add(fontface2).add(fontface3);
     hasLoadedFont = true;
   })();
+
+  // 下拉菜单
+  onMount(() => {
+    const menu = document.getElementById("menu");
+    const dropdown = document.getElementById("dropdown");
+    menu.addEventListener("click", () => {
+      dropdown.classList.toggle("hidden");
+      console.warn("click");
+    });
+  });
+  // 点击页面其他地方 关闭下拉菜单
+  onMount(() => {
+    const dropdown = document.getElementById("dropdown");
+    const menu = document.getElementById("menu");
+    document.addEventListener("click", (e) => {
+      if (e.target !== dropdown && e.target !== menu) {
+        dropdown.classList.add("hidden");
+      }
+    });
+  });
+
+  function scrollTo(id: string) {
+    const el = document.getElementById(id);
+    const top = el.offsetTop;
+    const client = document.getElementById("app");
+    client.scrollTo(0, top);
+    document.getElementById("menu").classList.toggle("hidden");
+  }
 </script>
 
 <main>
@@ -56,9 +92,22 @@
 
   <div id="navigator">
     <div class="left">
-      <span>首页</span>
-      <span>占位</span>
-      <span>占位</span>
+      <img id="menu" src="{MenuSvg}" alt="" />
+      <div id="dropdown" class="hidden">
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <div class="item" on:click="{() => scrollTo('app')}">首页</div>
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <div class="item" on:click="{() => scrollTo('what-have-we-done')}">
+          成就：滴水成河
+        </div>
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <div
+          class="item"
+          on:click="{() => scrollTo('what-brings-donation-increment')}"
+        >
+          规范：步履不停
+        </div>
+      </div>
     </div>
     <div class="right">
       <span>数据来源</span>
@@ -67,7 +116,13 @@
   <!-- 头图 -->
   <Header />
   <HeaderSmallText />
-  <Stars />
+  <Danmu />
+  <TwoBlock />
+  <TextAlign
+    text="{`「一对角膜、两个肾脏、一个肝脏、一颗心、两叶肺、一个胰腺」\n这是一个人可以捐出的器官，也可能让9个人接受器官，成就9段重生的奇迹。`}"
+    bg="b"
+    outerStyle="height: 30rem"
+  />
   <!-- 剪报 -->
   <NumOfVolunteers />
   <StatisticalData />
@@ -76,6 +131,7 @@
   <WhatHaveWeDone />
   <NewspaperClipping />
   <WhatBringsDonationIncrement />
+  <Stars />
   <Footer />
 </main>
 
@@ -111,8 +167,47 @@
       display: flex;
       column-gap: 1.5rem;
     }
+    z-index: 9999999;
     span {
       cursor: pointer;
+    }
+    // mix-blend-mode: difference;
+  }
+  #menu {
+    --width: calc(20px + 1rem);
+    width: var(--width);
+    height: var(--width);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: 0.2s;
+    &:hover {
+      background-color: white;
+      border-radius: 50%;
+    }
+  }
+  #dropdown {
+    position: absolute;
+    top: 3.5rem;
+    // left: 1rem;
+    transform: translateX(0.5rem);
+    background: white;
+    padding: 0.5rem 0;
+    line-height: 2rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: 0.3s;
+    transform: scaleY(1);
+    transform-origin: 0 0;
+    & > div {
+      padding: 0 1rem;
+      cursor: pointer;
+      &:hover {
+        background-color: #fafafa;
+      }
+    }
+    &.hidden {
+      transform: scaleY(0);
+      opacity: 0;
     }
   }
 </style>

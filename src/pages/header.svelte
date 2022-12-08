@@ -27,7 +27,7 @@
         数说器官捐献
         <img src="{HandHoldingHeart}" alt="" />
       </div>
-      <h1>７年奔赴</h1>
+      <!-- <h1>７年奔赴</h1> -->
       <h1>一场<underline id="header-num">0</underline>人的生命接力</h1>
     </div>
     <img
