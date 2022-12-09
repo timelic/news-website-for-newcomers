@@ -99,25 +99,25 @@
         <div class="item" on:click="{() => scrollTo('app')}">首页</div>
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div class="item" on:click="{() => scrollTo('what-have-we-done')}">
-          成就：滴水成河
+          成就 · 滴水成河
         </div>
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div
           class="item"
           on:click="{() => scrollTo('what-brings-donation-increment')}"
         >
-          规范：步履不停
+          规范 · 步履不停
         </div>
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div
           class="item"
           on:click="{() => scrollTo('what-difficulty-we-face')}"
         >
-          道阻意坚
+          挑战 · 道阻意坚
         </div>
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div class="item" on:click="{() => scrollTo('what-else-we-can-do')}">
-          生死时速
+          流程 · 生死时速
         </div>
       </div>
     </div>
@@ -133,7 +133,7 @@
   <TextAlign
     text="{`「一对角膜、两个肾脏、一个肝脏、一颗心、两叶肺、一个胰腺」\n这是一个人可以捐出的器官，也可能让9个人接受器官，成就9段重生的奇迹。`}"
     bg="b"
-    outerStyle="height: 30rem"
+    outerStyle="height: 20rem"
   />
   <!-- 剪报 -->
   <NumOfVolunteers />
@@ -180,8 +180,8 @@
       column-gap: 1.5rem;
     }
     .right {
-      // background-color: white;
-      // padding: 0.5rem 1rem;
+      background-color: rgba(255, 255, 255, 0.473);
+      padding: 0.5rem 1rem;
       border-radius: 1rem;
     }
     z-index: 9999999;
@@ -197,9 +197,10 @@
     cursor: pointer;
     padding: 0.5rem;
     transition: 0.2s;
+    background-color: rgba(255, 255, 255, 0.473);
+    border-radius: 50%;
     &:hover {
       background-color: white;
-      border-radius: 50%;
     }
   }
   #dropdown {

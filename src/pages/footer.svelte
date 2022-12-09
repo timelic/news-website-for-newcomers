@@ -5,7 +5,7 @@
     <div class="left" style="">
       <div>
         <div>数说器官捐献：</div>
-        <div>一场5580000人的生命接力</div>
+        <div>一场558万人的生命接力</div>
       </div>
       <div>
         <div>Organ Donation List:</div>

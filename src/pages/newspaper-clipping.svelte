@@ -183,7 +183,7 @@
     #text {
       font-family: var(--theme-font);
       font-size: 1.2rem;
-      line-height: 2rem;
+      line-height: 3rem;
       color: black;
       scale: 0.95 1;
       // text-shadow: 0 0 5px #ff525294;

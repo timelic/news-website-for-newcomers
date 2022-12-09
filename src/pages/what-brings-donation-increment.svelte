@@ -187,7 +187,7 @@
 
 <section id="what-difficulty-we-face" style="--progress: 0">
   <div id="what-difficulty-we-face-text" class="animate__animated">
-    道阻意坚
+    道阻意坚：No.48的漫漫长路
   </div>
 </section>
 
@@ -261,7 +261,9 @@
 </section>
 
 <section id="what-else-we-can-do" style="--progress: 0">
-  <div id="what-else-we-can-do-text" class="animate__animated">生死时速</div>
+  <div id="what-else-we-can-do-text" class="animate__animated">
+    生死摆渡：6分钟内的同向竞速
+  </div>
 </section>
 
 <div class="text-align">

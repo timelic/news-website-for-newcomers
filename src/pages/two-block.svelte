@@ -19,7 +19,9 @@
       <div class="t-left" style="min-width: 230px">
         2015-2021年，我国完成公民逝世后器官捐献累计
       </div>
-      <div class="t-right" style="width: 200px">34606例</div>
+      <div class="t-right" style="width: 200px">
+        34606<span style="color: #111;">例</span>
+      </div>
     </div>
     <div class="animate__animated" id="t-b">
       <div class="t-left">我国器官捐献数量每年平均增长</div>
