@@ -21,6 +21,7 @@
   import MenuSvg from "./assets/MenuOutline.svg";
 
   import { onMount } from "svelte";
+  import { eventbus } from "@utils";
   // 下载字体资源 svelte居然不允许顶层await
   let hasLoadedFont = false;
   (async () => {
@@ -107,10 +108,21 @@
         >
           规范：步履不停
         </div>
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <div
+          class="item"
+          on:click="{() => scrollTo('what-difficulty-we-face')}"
+        >
+          道阻意坚
+        </div>
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <div class="item" on:click="{() => scrollTo('what-else-we-can-do')}">
+          生死时速
+        </div>
       </div>
     </div>
     <div class="right">
-      <span>数据来源</span>
+      <span on:click="{() => scrollTo('footer')}">数据来源</span>
     </div>
   </div>
   <!-- 头图 -->
@@ -166,6 +178,11 @@
       margin-right: auto;
       display: flex;
       column-gap: 1.5rem;
+    }
+    .right {
+      // background-color: white;
+      // padding: 0.5rem 1rem;
+      border-radius: 1rem;
     }
     z-index: 9999999;
     span {

@@ -1,13 +1,27 @@
-<script lang="ts"></script>
+<script lang="ts">
+  import { onSee } from "@utils";
+  import { onMount } from "svelte";
+  onMount(() => {
+    onSee("t-a", () => {
+      const t_a = document.getElementById("t-a");
+      t_a.classList.add("animate__fadeInLeft");
+      // t-b
+      const t_b = document.getElementById("t-b");
+      t_b.classList.add("animate__fadeInRight");
+    });
+  });
+</script>
 
 <section>
   <div class="t-top">自2015年公民志愿捐献成为我国器官移植唯一合法来源以来</div>
   <div class="t-bottom">
-    <div>
-      <div class="t-left">2015-2021年，我国完成公民逝世后器官捐献累计</div>
+    <div class="animate__animated" id="t-a">
+      <div class="t-left" style="min-width: 230px">
+        2015-2021年，我国完成公民逝世后器官捐献累计
+      </div>
       <div class="t-right" style="width: 200px">34606例</div>
     </div>
-    <div>
+    <div class="animate__animated" id="t-b">
       <div class="t-left">我国器官捐献数量每年平均增长</div>
       <div class="t-right" style="width: 100px">20%</div>
     </div>
@@ -25,7 +39,7 @@
     background: var(--pink-bg);
     .t- {
       &top {
-        font-size: 1.25em;
+        font-size: 1.2rem;
         font-weight: bold;
         text-align: center;
         margin-top: 200px;

@@ -18,9 +18,6 @@
       ) as HTMLAudioElement;
       audio1.play();
       audio2.play();
-      console.error("audio1", audio1);
-      console.error("audio2", audio2);
-      console.error("play audio1 and audio2");
     });
   });
 </script>
@@ -63,7 +60,7 @@
   #start {
     background-color: #eee;
     padding: 0 1rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: black;
     line-height: 2rem;
     border-radius: 1rem;

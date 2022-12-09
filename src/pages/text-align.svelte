@@ -1,7 +1,7 @@
 <script lang="ts">
   import classnames from "classnames";
   export let text: string;
-  export let fontSize: "small" | "medium" | "large" = "medium";
+  export let fontSize: "small" | "medium" | "large" = "small";
   $: fontSizeClass = `text-${fontSize}`;
   export let bg: "a" | "b" | "c" = "a";
   $: bgClass = `bg-${bg}`;
@@ -43,7 +43,7 @@
     }
 
     div {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       line-height: 2.5rem;
       text-align: center;
       white-space: pre-wrap;
@@ -54,7 +54,7 @@
         line-height: 2rem;
       }
       &medium {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         line-height: 2.5rem;
       }
       &large {

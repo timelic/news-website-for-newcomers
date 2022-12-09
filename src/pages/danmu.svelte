@@ -53,7 +53,7 @@
           transform: "scale(0.8)",
         },
       });
-    }, 500);
+    }, 100);
 
     document.getElementById("legal-btn").onclick = () => {
       document.getElementById("legal-btn").style.display = "none";
@@ -72,7 +72,7 @@
     position: relative;
     color: white;
     background: none;
-    height: 60vh;
+    height: 70vh;
     &::before {
       content: "";
       position: absolute;

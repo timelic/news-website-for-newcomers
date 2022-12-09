@@ -23,7 +23,7 @@
 <style lang="scss">
   section {
     display: flex;
-    height: 60vh;
+    height: 70vh;
     justify-content: center;
     align-items: center;
     column-gap: 4rem;
@@ -36,7 +36,7 @@
       flex-direction: column;
       row-gap: 2rem;
       width: 650px;
-      line-height: 2rem;
+      line-height: 3rem;
       font-size: 1.2rem;
     }
   }

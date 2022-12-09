@@ -44,7 +44,7 @@
     <div>在中国</div>
     <div>每年有<underline>30万</underline>患者可以通过器官移植重获新生</div>
     <div>但目前</div>
-    <div>每年只能进行<underline>2万多例</underline>器官移植手术</div>
+    <div>每年只能进行<underline>2万多</underline>例器官移植手术</div>
   </div>
   <div id="circle-30w-image-container">
     <img src="{img1}" class="animate__animated" alt="30万小圈圈" />
@@ -67,7 +67,7 @@
       position: absolute;
       top: 5vh;
       left: 10vw;
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       // opacity: 0;
       transition: 0.5s;
       &::before {
@@ -103,7 +103,7 @@
       background-color: white;
       z-index: 99;
       padding: 1rem;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-family: var(--theme-font);
       line-height: 2rem;
       border-radius: 1rem;

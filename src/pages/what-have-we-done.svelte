@@ -117,10 +117,10 @@
   </section>
   <section class="text-align">
     <div>2021年</div>
-    <div>我国实施肾脏移手术<underline>12039例</underline></div>
-    <div>实施肝脏移植手术<underline>5834例</underline></div>
-    <div>肺脏<underline>775例</underline></div>
-    <div>心脏<underline>738例</underline></div>
+    <div>我国实施肾脏移手术<underline>12039</underline>例</div>
+    <div>实施肝脏移植手术<underline>5834</underline>例</div>
+    <div>肺脏<underline>775</underline>例</div>
+    <div>心脏<underline>738</underline>例</div>
     <div>……</div>
     <div>器官捐献事业又迎来了捐献数量的巨大增长</div>
     <div>在如潮大爱中又登上了一个崭新阶段</div>
@@ -185,7 +185,7 @@
     padding-left: calc((100vw - 851px) / 2) !important;
     margin: auto;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: var(--theme-font);
     line-height: 3rem;
     padding: 2rem 0;

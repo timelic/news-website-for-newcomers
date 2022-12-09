@@ -104,7 +104,7 @@
     <div id="num-of-volunteers-text" class="animate__animated bg-card">
       <div>截止到2022年11月</div>
       <div>中国人体器官捐献管理中心登记的</div>
-      <div>志愿人数已达<underline>5584251人</underline></div>
+      <div>志愿人数已达<underline>5584251</underline>人</div>
       <div>十多年来，登记人数累计增长<underline>509%</underline></div>
     </div>
     <div style="display: block; height: 150px; width: 100%"></div>
@@ -166,7 +166,7 @@
       background-color: white;
       z-index: 99;
       padding: 1.5rem 8rem;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-family: var(--theme-font);
       line-height: 2.5rem;
       border-radius: 1rem;
@@ -178,7 +178,7 @@
   .annotations {
     font-family: var(--theme-font);
     line-height: 1.5rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     width: 250px;
     :first-child {
       color: #ffb35d;

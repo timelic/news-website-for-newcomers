@@ -106,7 +106,7 @@
         padding: 1rem 1.5rem;
         border-radius: 2rem;
       }
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       line-height: 1.75rem;
       width: max-content;
       &:nth-of-type(1) {

@@ -1,15 +1,15 @@
 <script lang="ts"></script>
 
-<section>
+<section id="footer">
   <div class="a" style="display: flex">
     <div class="left" style="">
       <div>
         <div>数说器官捐献：</div>
-        <div>7年奔赴，一场5580000人的生命接力</div>
+        <div>一场5580000人的生命接力</div>
       </div>
       <div>
-        <div>Organ Donation List: A Relay for Life of</div>
-        <div>5,580,000 People through 7-year Dedication</div>
+        <div>Organ Donation List:</div>
+        <div>A Relay for Life of 5,580,000 People</div>
       </div>
     </div>
 
@@ -69,7 +69,7 @@
         flex-grow: 1;
       }
       .left {
-        width: 700px;
+        width: 600px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

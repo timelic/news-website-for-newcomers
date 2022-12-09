@@ -182,8 +182,8 @@
 
     #text {
       font-family: var(--theme-font);
-      font-size: 3.5rem;
-      line-height: 5rem;
+      font-size: 1.2rem;
+      line-height: 2rem;
       color: black;
       scale: 0.95 1;
       // text-shadow: 0 0 5px #ff525294;

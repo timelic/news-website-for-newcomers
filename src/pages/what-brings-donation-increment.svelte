@@ -64,21 +64,21 @@
   </div>
   <div>
     此后，各地也定期开展规范化培训，截止到2022年8月，全国已成功开办<underline
-      >三十余期</underline
-    >全国人体器官捐献协调员培训班。
+      >三十余</underline
+    >期全国人体器官捐献协调员培训班。
   </div>
   <img id="runners" src="{runners}" alt="" srcset="" />
-  <div style="text-align: center; font-size: 1.1rem;">
+  <div style="text-align: center; font-size: 1.2rem;">
     全国器官捐献协调员培训情况
   </div>
   <div>
     2021年，中国人体器官捐献管理中心完成年度新增人体器官捐献协调员综合测评工作，共<underline
-      >431名</underline
-    >学员通过综合测评，取得培训合格证书。
+      >431</underline
+    >名学员通过综合测评，取得培训合格证书。
   </div>
   <div>
-    同时，全国共有<underline>2252名</underline
-    >协调员通过中国人体器官捐献管理中心的年度考核完成注册。
+    同时，全国共有<underline>2252</underline
+    >名协调员通过中国人体器官捐献管理中心的年度考核完成注册。
   </div>
   <div>
     2022年，中国人体器官捐献管理中心首次向全国所有在册人体器官捐献协调员发放工具包、工作服装和新版工作证件。
@@ -110,12 +110,6 @@
       >具有器官移植资质的医院数量不断增加</underline
     >，能够进行的器官移植项目也在不断完善，部分医院逐渐从仅能完成单一器官移植逐渐发展成为多器官移植机构。
   </div>
-  <div>
-    与此同时，为了更大程度激发捐献器官的医疗价值，许多医疗团队不断攻坚克难，器官移植医疗质量也不断完善，器官保存于供体器官维护技术不断改进，术后配套技术也不断完善，<underline
-      >1年和5年术后存活率已达世界先进水平之列</underline
-    >。
-  </div>
-
   <div class="chart" id="silk">
     <iframe
       src="https://dycharts.com/xshow/index.html?id=c_de9ab65860b6586ba6cc51aabf83b5d2"
@@ -132,6 +126,12 @@
       frameborder="0"
       title=""></iframe>
   </div>
+  <div>
+    与此同时，为了更大程度激发捐献器官的医疗价值，许多医疗团队不断攻坚克难，器官移植医疗质量也不断完善，器官保存于供体器官维护技术不断改进，术后配套技术也不断完善，<underline
+      >1年和5年术后存活率已达世界先进水平之列</underline
+    >。
+  </div>
+
   <!-- 4 -->
   <h2 class="red">4.坚实的“保护网”：相关法律法规的完善和落实</h2>
   <div>
@@ -139,9 +139,9 @@
   </div>
   <div>
     对外，严厉打击，肃正风气。自2012年起，我国裁判文书网中“组织出卖人体器官罪”一词条收纳的相关判决文书份数已达<underline
-      >980份</underline
-    >，年度判卷文书更从每年不足10份迅速增长至每年<underline>241份</underline
-    >。这表明，我国法律管制力度明显增强，对器官非法买卖行为和“黑作坊”重拳出击，绝不容忍。
+      >980</underline
+    >份，年度判卷文书更从每年不足10份迅速增长至每年<underline>241</underline
+    >份。这表明，我国法律管制力度明显增强，对器官非法买卖行为和“黑作坊”重拳出击，绝不容忍。
   </div>
   <div>
     对内，加强管理，规范流程。曾经，由于移植器官来源的敏感性，器官捐献行业曾经是个“灰色地带”。<underline
@@ -194,9 +194,9 @@
 <section class="text-align text-left">
   <div>
     在各方的努力下，目前我国器官捐献事业取得了长足的进步，器官捐献、移植数量两项指标均居世界<underline
-      >第二位</underline
-    >，但是每百万人口器官捐献率（PMP）却仅为世界<underline>第四十八位</underline
-    >。
+      >第二</underline
+    >位，但是每百万人口器官捐献率（PMP）却仅为世界<underline>第四十八</underline
+    >位。
   </div>
   <div>
     2020年，<underline
@@ -418,7 +418,7 @@
     }
   }
   .text-align {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     background: var(--pink-bg);
     & > div {
       margin: 1rem 0;
@@ -453,7 +453,7 @@
     font-family: var(--theme-font-regular);
     transition: 0.3s;
     .legal-title {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-family: var(--theme-font);
     }
     &:hover {
@@ -468,7 +468,7 @@
     div {
       width: fit-content;
       background-color: white;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       padding: 0.5rem 2rem;
       border-radius: 2rem;
       box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
@@ -482,13 +482,14 @@
   .italic {
     // transform: skewX(-5deg);
     font-family: var(--theme-font-regular-italic);
-    font-size: 1.1rem;
+    font-style: italic;
+    font-size: 1.2rem;
     text-align: left;
     color: rgb(0, 0, 0);
   }
   .story {
     font-family: var(--theme-font-regular);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     & > div {
       // transform: skewX(-5deg);
       font-family: var(--theme-font-regular-italic);

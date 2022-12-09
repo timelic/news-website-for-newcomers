@@ -48,9 +48,9 @@
 <section id="statistical-data">
   <div id="statistical-data-text" class="animate__animated bg-card">
     <div>截至2021年底</div>
-    <div>我国累计完成捐献<underline>3.7万余例</underline></div>
-    <div>捐献器官<underline>11.3万余个</underline></div>
-    <div>挽救了<underline>11万余名器</underline>官衰竭患者的生命</div>
+    <div>我国累计完成捐献<underline>3.7万余</underline>例</div>
+    <div>捐献器官<underline>11.3万余</underline>个</div>
+    <div>挽救了<underline>11万余</underline>名器官衰竭患者的生命</div>
   </div>
   <div id="statistical-data-image-container">
     <div>
@@ -132,7 +132,7 @@
       background-color: white;
       z-index: 99;
       padding: 1rem;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-family: var(--theme-font);
       line-height: 2rem;
       border-radius: 1rem;

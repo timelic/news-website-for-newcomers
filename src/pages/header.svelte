@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { eventbus } from "@utils";
   import anime from "animejs";
   import { onMount } from "svelte";
   import HandHoldingHeart from "../assets/HandHoldingHeart.svg";
@@ -7,15 +8,17 @@
     cycles: "0",
   };
   onMount(() => {
-    const num = document.getElementById("header-num");
-    setInterval(() => {
-      num.innerText = parseInt(battery.cycles).toString();
-    }, (2 * 1000) / 60);
-    anime({
-      targets: battery,
-      cycles: 5580000,
-      duration: 1000,
-      easing: "linear",
+    eventbus.on("start", () => {
+      const num = document.getElementById("header-num");
+      setInterval(() => {
+        num.innerText = parseInt(battery.cycles).toString();
+      }, (2 * 1000) / 60);
+      anime({
+        targets: battery,
+        cycles: 558,
+        duration: 1000,
+        easing: "linear",
+      });
     });
   });
 </script>
@@ -28,7 +31,7 @@
         <img src="{HandHoldingHeart}" alt="" />
       </div>
       <!-- <h1>７年奔赴</h1> -->
-      <h1>一场<underline id="header-num">0</underline>人的生命接力</h1>
+      <h1>一场<underline id="header-num">0</underline>万人的生命接力</h1>
     </div>
     <img
       id="title-image"
@@ -53,11 +56,12 @@
       // max-width: 1200px;
       // min-width: 1200px;
       // 斜体
-      min-width: calc(54rem + 500px);
+      --width: 50rem;
+      min-width: calc(var(--width) + 500px);
       display: flex;
       align-items: center;
       #title {
-        flex-basis: 54rem;
+        flex-basis: var(--width);
         flex-shrink: 0;
         // transform: scaleX(0.8);
         font-size: 4.5rem;
