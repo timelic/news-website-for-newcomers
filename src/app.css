@@ -37,3 +37,7 @@
   background-color: #ffffff99 !important;
   backdrop-filter: blur(10px) !important;
 }
+
+iframe {
+  mix-blend-mode: darken;
+}

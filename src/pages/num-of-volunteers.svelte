@@ -110,7 +110,15 @@
     <div style="display: block; height: 150px; width: 100%"></div>
   </div>
 
-  <div id="num-of-volunteers-chart-container" style="--opacity: 1"></div>
+  <!-- <div id="num-of-volunteers-chart-container" style="--opacity: 1"></div> -->
+  <iframe
+    id="num-of-volunteers-chart-container"
+    src="https://dycharts.com/xshow/index.html?id=bd7e3698f26e6b320cce38bf4ab645c1"
+    width="1000"
+    height="450"
+    scrolling="no"
+    frameborder="0"
+    title=""></iframe>
   <div id="num-of-volunteers-title">志愿登记人数</div>
 </section>
 
@@ -140,7 +148,7 @@
     // }
     &-chart-container {
       width: 800px;
-      height: 500px;
+      // height: 500px;
       margin-bottom: 2rem;
       position: relative;
       opacity: var(--opacity);

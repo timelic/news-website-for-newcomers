@@ -37,6 +37,13 @@
         .setAttribute("style", "--progress: 1");
     };
   });
+
+  onMount(() => {
+    document.getElementById("story-btn").onclick = () => {
+      document.getElementById("story-btn").style.display = "none";
+      document.getElementById("story-section").style.display = "block";
+    };
+  });
 </script>
 
 <section id="what-brings-donation-increment" style="--progress: 0">
@@ -110,7 +117,7 @@
       >具有器官移植资质的医院数量不断增加</underline
     >，能够进行的器官移植项目也在不断完善，部分医院逐渐从仅能完成单一器官移植逐渐发展成为多器官移植机构。
   </div>
-  <div class="chart" id="silk">
+  <!-- <div class="chart" id="silk">
     <iframe
       src="https://dycharts.com/xshow/index.html?id=c_de9ab65860b6586ba6cc51aabf83b5d2"
       width="600"
@@ -125,6 +132,16 @@
       scrolling="no"
       frameborder="0"
       title=""></iframe>
+  </div> -->
+  <div class="chart">
+    <iframe
+      src="https://dycharts.com/xshow/index.html?id=63a2a1c15502293b608087c97e988683"
+      width="1920"
+      height="280"
+      scrolling="no"
+      frameborder="0"
+      title=""
+      style="transform: scale(1.1);"></iframe>
   </div>
   <div>
     与此同时，为了更大程度激发捐献器官的医疗价值，许多医疗团队不断攻坚克难，器官移植医疗质量也不断完善，器官保存于供体器官维护技术不断改进，术后配套技术也不断完善，<underline
@@ -142,6 +159,15 @@
       >980</underline
     >份，年度判卷文书更从每年不足10份迅速增长至每年<underline>241</underline
     >份。这表明，我国法律管制力度明显增强，对器官非法买卖行为和“黑作坊”重拳出击，绝不容忍。
+  </div>
+  <div class="chart">
+    <iframe
+      src="https://dycharts.com/xshow/index.html?id=2a2c7eddc63d6f1e46ef3088e77ddf25"
+      width="1920"
+      height="500"
+      scrolling="no"
+      frameborder="0"
+      title=""></iframe>
   </div>
   <div>
     对内，加强管理，规范流程。曾经，由于移植器官来源的敏感性，器官捐献行业曾经是个“灰色地带”。<underline
@@ -206,8 +232,8 @@
   <div class="chart">
     <iframe
       src="https://dycharts.com/xshow/index.html?id=73a2b5979999c30b1840bed8a778af19"
-      width="614"
-      height="413"
+      width="1920"
+      height="400"
       scrolling="no"
       frameborder="0"
       title=""></iframe>
@@ -233,8 +259,8 @@
   <div class="chart">
     <iframe
       src="https://dycharts.com/xshow/index.html?id=c_b11b07047f3e83dcc7fae19e0d1b0511"
-      width="700"
-      height="520"
+      width="1920"
+      height="450"
       scrolling="no"
       frameborder="0"
       title=""></iframe>
@@ -266,7 +292,7 @@
   </div>
 </section>
 
-<div class="text-align">
+<div class="text-align" id="k" style="position: relative;">
   <div>提及器官捐献</div>
   <div>有人觉得这是奉献，大爱无疆</div>
   <div>有人认为应该延续传统，入土为安</div>
@@ -279,25 +305,43 @@
   <div>是放下手中的笔，留住最后的不舍</div>
   <div>还是擦干泪水，尊重这份最后的爱传递下去</div>
   <div>一个又一个家属做出了他们的决定</div>
+  <div id="story-btn">点击查看小溪外公的捐献故事</div>
 </div>
-<section class="text-align">
-  <div class="italic">
-    2020年，小溪的外公因为脑梗不幸去世。病情凶险又发展迅速，加上老人之前就有高血压等老年疾病，送到医院就收到了病危通知书，即便送到了杭州的省级医院也无力回天。整个家被这份突如其来的沉痛打击紧紧裹挟着。哀痛、不舍、痛哭，疾病和死亡似乎像一把无情的剪刀将亲人间灯火可温的血脉联系残忍剪断，家人们一时间都难以接受。
-  </div>
-  <div class="italic">
-    悲痛中，舅舅突然想起外公生前几次在看新闻报道时提出捐献器官的想法都被家人打断了。
-  </div>
-  <div class="italic">
-    “您现在不是挺健康的嘛？怎么想起说这个？”“好好的，说这话干什么？”
-  </div>
-  <div class="italic">
-    而作为儿子，除了痛苦和悲伤，他也想帮父亲完成最后的心愿。他觉得，这是对逝者最后的尊重，更是生者唯一能做的事。所以，当父亲去世后，他决定代父亲正式向家人提出器官捐献的请求。
-  </div>
-  <div class="italic">
-    起初，受宗教信仰和传统观念的影响，外婆并不同意舅舅的请求。除了彼时失去伴侣的无助和悲伤，让她更不能接受与看似与传统观念和佛教信仰中遗体应该完整的观念相悖的事。
-  </div>
-  <div class="italic">
-    而此刻，和很多器官捐献志愿者家属一样，小溪一家面临两难的抉择，一端是传统与情感，一端是尊重与大爱。对于如何决定，究竟如何守护这份亲情，大家都在沉思......
+<section class="text-align" id="story-section">
+  <div>
+    <div class="italic">
+      2020年，小溪的外公因为脑梗不幸去世。病情凶险又发展迅速，加上老人之前就有高血压等老年疾病，送到医院就收到了病危通知书，即便送到了杭州的省级医院也无力回天。整个家被这份突如其来的沉痛打击紧紧裹挟着。哀痛、不舍、痛哭，疾病和死亡似乎像一把无情的剪刀将亲人间灯火可温的血脉联系残忍剪断，家人们一时间都难以接受。
+    </div>
+    <div class="italic">
+      悲痛中，舅舅突然想起外公生前几次在看新闻报道时提出捐献器官的想法都被家人打断了。
+    </div>
+    <div class="italic">
+      “您现在不是挺健康的嘛？怎么想起说这个？”“好好的，说这话干什么？”
+    </div>
+    <div class="italic">
+      而作为儿子，除了痛苦和悲伤，他也想帮父亲完成最后的心愿。他觉得，这是对逝者最后的尊重，更是生者唯一能做的事。所以，当父亲去世后，他决定代父亲正式向家人提出器官捐献的请求。
+    </div>
+    <div class="italic">
+      起初，受宗教信仰和传统观念的影响，外婆并不同意舅舅的请求。除了彼时失去伴侣的无助和悲伤，让她更不能接受与看似与传统观念和佛教信仰中遗体应该完整的观念相悖的事。
+    </div>
+    <div class="italic">
+      而此刻，和很多器官捐献志愿者家属一样，小溪一家面临两难的抉择，一端是传统与情感，一端是尊重与大爱。对于如何决定，究竟如何守护这份亲情，大家都在沉思......
+    </div>
+    <div class="italic">
+      提到外公，小溪总是感觉这位长者是很安心、温暖的依靠。“他生前便是个老好人，我们家旁边住着外来务工的人，外公总是拿些海鲜、肉什么的送过去，来不及照看小孩的时候他们也会把孩子放在我们家。街坊邻居都说他是个好人。他更是一个信仰坚定的老共产党员，外公说自己是抗美援朝时就是党员了，即便是退休了也始终‘为人民服务’。平日，外公就教导我，要乐于助人、多做好事。”
+    </div>
+    <div class="italic">
+      小溪清楚地记得，外公总是在看到有人需要帮助时慷慨解囊，2008年的汶川地震、2011年洪水......不会使用智能手机的外公总是拿着信封郑重地送上他的爱心善款。我想，外公在生命的最后时刻，也在用身体力行教导我，去做好人，多做善事。”
+    </div>
+    <div class="italic">
+      最后，舅舅还是说服了家人，外婆也选择尊重外公的心愿，因为她和外公一样，“希望能救一个是一个”。在全家达成帮助外公奔赴这场接力的共识后，舅舅第一时间与医院取得了联系。
+    </div>
+    <div class="italic">
+      虽然外公生前只是在新闻上看到有关器官捐献的报道，也只是在生前口头表达过关于器官捐献的强烈意愿，本人并没有确认签署志愿协议。但是舅舅还是在医院和工作人员的帮助下，完成评估、登记、确认等一系列流程，帮外公完成了最后的心愿。
+    </div>
+    <div class="italic">
+      最后，小希外公的眼角膜成功帮助一位患者重见光明。这位慈祥、温暖的长者也如愿在生命的最后为世界留下了一抹光亮。
+    </div>
   </div>
 </section>
 
@@ -310,12 +354,7 @@
     <div>也可能让9个人接受器官，</div>
     <div>成就<underline>9段重生的奇迹</underline>。</div>
   </div>
-  <div class="italic">
-    提到外公，小溪总是感觉这位长者是很安心、温暖的依靠。“他生前便是个老好人，我们家旁边住着外来务工的人，外公总是拿些海鲜、肉什么的送过去，来不及照看小孩的时候他们也会把孩子放在我们家。街坊邻居都说他是个好人。他更是一个信仰坚定的老共产党员，外公说自己是抗美援朝时就是党员了，即便是退休了也始终‘为人民服务’。平日，外公就教导我，要乐于助人、多做好事。”
-  </div>
-  <div class="italic">
-    小溪清楚地记得，外公总是在看到有人需要帮助时慷慨解囊，2008年的汶川地震、2011年洪水......不会使用智能手机的外公总是拿着信封郑重地送上他的爱心善款。我想，外公在生命的最后时刻，也在用身体力行教导我，去做好人，多做善事。”
-  </div>
+
   <div style="text-align: center">
     <div class="space"></div>
     <div class="red-ques">这些人是如何接受器官的呢？</div>
@@ -333,17 +372,20 @@
     srcset=""
   />
   <div>
-    但是，亲友这份期待留给世界的最后一份礼物，却无法承担太久的等候。事实上，器官捐献不仅是一场爱的接力，更是一场时间的赛跑。
+    而亲友这份期待留给世界的最后一份礼物，却无法承担太久的等候。事实上，器官捐献不仅是一场爱的接力，更是一场时间的赛跑。
   </div>
   <div>
     医学上，<underline>通常以“热缺血时间”表示脑死亡后器官可存活的时间</underline
-    >。从器官捐献者心脏停跳到将器官切取完成，进行冷灌注（捐献器官用器官保存液进行灌注，利于保持移植物的活性）这段时间称为热缺血时间。热缺血时，虽然血流中断但移植物的组织细胞仍继续代谢，期间最易发生移植物缺血的严重后果。
+    >。从器官捐献者心脏停跳到将器官切取完成，进行冷灌注（捐献器官用器官保存液进行灌注，利于保持移植物的活性）这段时间称为热缺血时间。
   </div>
-  <div class="chart" style="transform: scale(0.8); margin: -50px 0;">
+  <div>
+    热缺血时，虽然血流中断但移植物的组织细胞仍继续代谢，期间最易发生移植物缺血的严重后果。所以，在我们犹豫不决的时候，正是进行移植手术的黄金时间。晚一分钟，死者器官的评估结果就多一分不确定性，也就有一个等待者可能会失去重生的机会。
+  </div>
+  <div class="chart" style="transform: scale(0.9); margin: -50px 0;">
     <iframe
-      src="https://dycharts.com/xshow/index.html?id=c_d0f8dcf186d209acc74f0b184ee2880c"
-      width="600"
-      height="600"
+      src="https://dycharts.com/xshow/index.html?id=f11a7130c67897a2b81cb663e06fe030"
+      width="1920"
+      height="450"
       scrolling="no"
       frameborder="0"
       title=""></iframe>
@@ -352,18 +394,6 @@
     所以，在我们犹豫不决的时候，正是进行移植手术的黄金时间。<underline
       >晚一分钟，死者器官的评估结果就多一分不确定性，也就有一个等待者可能会失去重生的机会。</underline
     >
-  </div>
-</section>
-
-<section class="text-align">
-  <div class="italic">
-    最后，舅舅还是说服了家人，外婆也选择尊重外公的心愿，因为她和外公一样，“希望能救一个是一个”。在全家达成帮助外公奔赴这场接力的共识后，舅舅第一时间与医院取得了联系。
-  </div>
-  <div class="italic">
-    虽然外公生前只是在新闻上看到有关器官捐献的报道，也只是在生前口头表达过关于器官捐献的强烈意愿，本人并没有确认签署志愿协议。但是舅舅还是在医院和工作人员的帮助下，完成评估、登记、确认等一系列流程，帮外公完成了最后的心愿。
-  </div>
-  <div class="italic">
-    最后，小希外公的眼角膜成功帮助一位患者重见光明。这位慈祥、温暖的长者也如愿在生命的最后为世界留下了一抹光亮。
   </div>
 </section>
 
@@ -476,7 +506,7 @@
       box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
       @for $i from 0 through 3 {
         &:nth-of-type(#{$i + 1}) {
-          margin-left: calc(5.1rem * #{$i});
+          margin-left: calc(4.5rem * #{$i});
         }
       }
     }
@@ -601,5 +631,42 @@
     iframe {
       // transform: scale(0.8);
     }
+  }
+  #story-btn {
+    position: absolute;
+    bottom: 0;
+    left: -1rem;
+    background: white;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    background-color: rgba(255, 255, 255, 0.788);
+    width: fit-content;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 40px -7px;
+    }
+  }
+  #story-section {
+    display: none;
+    & > div {
+      width: 851px;
+      background: white;
+      padding: 2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      border-radius: 1rem;
+    }
+  }
+  #k > div:not(:last-of-type) {
+    margin: 0;
+  }
+  #runners {
+    transform: scale(0.9);
   }
 </style>

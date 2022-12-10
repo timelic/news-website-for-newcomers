@@ -97,10 +97,18 @@
     <div>也奔走在一次次平凡而生动的接力中</div>
   </section>
   <section class="chart">
-    <iframe
+    <!-- <iframe
       src="https://dycharts.com/xshow/index.html?id=c_98cafa44ae20768ee91144b295fda893"
       width="600"
       height="550"
+      scrolling="no"
+      frameborder="0"
+      title=""
+      style="margin-bottom: 2rem"></iframe> -->
+    <iframe
+      src="https://dycharts.com/xshow/index.html?id=92ad6510ec8032c03c61e27abbf0d47a"
+      width="1920"
+      height="450"
       scrolling="no"
       frameborder="0"
       title=""
@@ -127,8 +135,15 @@
   </section>
 
   <section class="chart" style="mix-blend-mode: unset;">
-    <div id="organ-pie-container" class="chart-content"></div>
-    <div id="organ-line-container" class="chart-content"></div>
+    <!-- <div id="organ-pie-container" class="chart-content"></div>
+    <div id="organ-line-container" class="chart-content"></div> -->
+    <iframe
+      src="https://dycharts.com/xshow/index.html?id=8f3a017cae05047b83b5ccceece87cb3"
+      width="1920"
+      height="450"
+      scrolling="no"
+      frameborder="0"
+      title=""></iframe>
   </section>
 
   <!-- <section class="chart">

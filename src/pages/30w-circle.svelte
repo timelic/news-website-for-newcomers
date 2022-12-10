@@ -82,7 +82,7 @@
       }
     }
     &image-container {
-      --width: 650px;
+      --width: 850px;
       width: var(--width);
       height: calc(var(--width) * 14 / 19);
       position: relative;
@@ -92,7 +92,7 @@
         max-width: 100%;
         max-height: 100%;
         position: absolute;
-        top: 0;
+        top: 3rem;
         bottom: 0;
         left: 0;
       }
