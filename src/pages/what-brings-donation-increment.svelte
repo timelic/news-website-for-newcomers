@@ -8,7 +8,7 @@
   import greenChannel2 from "../assets/green-channel-2.gif";
   import DanmuJs from "danmu.js";
   import organDonate from "../assets/organ-donate.gif";
-
+  import Girl from "../assets/girl.png";
   function textAppear(textElId: string) {
     onMount(() => {
       const client = document.getElementById("app");
@@ -41,6 +41,7 @@
   onMount(() => {
     document.getElementById("story-btn").onclick = () => {
       document.getElementById("story-btn").style.display = "none";
+      document.getElementById("girl").style.display = "none";
       document.getElementById("story-section").style.display = "block";
     };
   });
@@ -219,9 +220,9 @@
 
 <section class="text-align text-left">
   <div>
-    在各方的努力下，目前我国器官捐献事业取得了长足的进步，器官捐献、移植数量两项指标均居世界<underline
-      >第二</underline
-    >位，但是每百万人口器官捐献率（PMP）却仅为世界<underline>第四十八</underline
+    在各方的努力下，目前我国器官捐献事业取得了长足的进步，器官捐献、移植数量两项指标均居世界第<underline
+      >二</underline
+    >位，但是每百万人口器官捐献率（PMP）却仅为世界第<underline>四十八</underline
     >位。
   </div>
   <div>
@@ -233,7 +234,7 @@
     <iframe
       src="https://dycharts.com/xshow/index.html?id=73a2b5979999c30b1840bed8a778af19"
       width="1920"
-      height="400"
+      height="420"
       scrolling="no"
       frameborder="0"
       title=""></iframe>
@@ -282,7 +283,7 @@
     <div>第一，准入更多的优质供体器官用于合法人体器官捐献事业。</div>
     <div>第二，进一步提升移植手术质量，提升器官捐献利用率。</div>
     <div>第三，补充完善相关条例，建立中国模式的管理方案。</div>
-    <div>第四，正视发展差距，补齐落后短板，形成全国器官捐献一张网。</div>
+    <div>第四，正视差距，补齐短板，形成全国器官捐献一张网。</div>
   </div>
 </section>
 
@@ -305,6 +306,7 @@
   <div>是放下手中的笔，留住最后的不舍</div>
   <div>还是擦干泪水，尊重这份最后的爱传递下去</div>
   <div>一个又一个家属做出了他们的决定</div>
+  <img id="girl" src="{Girl}" alt="" srcset="" />
   <div id="story-btn">点击查看小溪外公的捐献故事</div>
 </div>
 <section class="text-align" id="story-section">
@@ -345,7 +347,7 @@
   </div>
 </section>
 
-<section class="text-align">
+<!-- <section class="text-align">
   <div style="text-align: center">
     <div class="red-ques">这个决定意味着什么？</div>
     <div>「一对角膜、两个肾脏、 一个肝脏、</div>
@@ -363,14 +365,8 @@
     <div>也需要在进行手术前完成一系列的流程</div>
     <div>确保这份重生的礼物能够真正递送到需要的人身边</div>
   </div>
-</section>
-<section class="text-align text-left" style="padding-top: 0;">
-  <img
-    src="{organDonate}"
-    style="max-width: 851px; background: white;"
-    alt=""
-    srcset=""
-  />
+</section> -->
+<section class="text-align text-left">
   <div>
     而亲友这份期待留给世界的最后一份礼物，却无法承担太久的等候。事实上，器官捐献不仅是一场爱的接力，更是一场时间的赛跑。
   </div>
@@ -379,7 +375,7 @@
     >。从器官捐献者心脏停跳到将器官切取完成，进行冷灌注（捐献器官用器官保存液进行灌注，利于保持移植物的活性）这段时间称为热缺血时间。
   </div>
   <div>
-    热缺血时，虽然血流中断但移植物的组织细胞仍继续代谢，期间最易发生移植物缺血的严重后果。所以，在我们犹豫不决的时候，正是进行移植手术的黄金时间。晚一分钟，死者器官的评估结果就多一分不确定性，也就有一个等待者可能会失去重生的机会。
+    热缺血时，虽然血流中断但移植物的组织细胞仍继续代谢，期间最易发生移植物缺血的严重后果。所以，在我们犹豫不决的时候，正是进行移植手术的黄金时间。
   </div>
   <div class="chart" style="transform: scale(0.9); margin: -50px 0;">
     <iframe
@@ -395,9 +391,21 @@
       >晚一分钟，死者器官的评估结果就多一分不确定性，也就有一个等待者可能会失去重生的机会。</underline
     >
   </div>
+  <div>
+    器官移植手术黄金时间虽短，流程却必须规范。在中国，器官捐献的完成不只需要本人生前的移植意愿，也需要在进行手术前完成一系列的流程，确保这份重生的礼物能够真正递送到需要的人身边。
+  </div>
+  <div>
+    在时间短、流程长的情况下，便需要定点医院、红十字会、中国人体器官捐献管理中心等相关机构共同协作，同向竞速，为顺利进行器官移植手术保驾护航。
+  </div>
+  <img
+    src="{organDonate}"
+    style="max-width: 851px; background: white;"
+    alt=""
+    srcset=""
+  />
 </section>
 
-<section class="text-align">
+<section id="love-and" class="text-align">
   <div>爱与勇气，颠扑不破。</div>
   <div>上苍用疾病与死亡考验我们，</div>
   <div>我们用大爱和勇气诠释生命的意义。</div>
@@ -513,8 +521,9 @@
   }
   .italic {
     // transform: skewX(-5deg);
-    font-family: var(--theme-font-regular-italic);
-    font-style: italic;
+    // font-family: var(--theme-font-regular-italic);
+    font-family: var(--theme-font-regular);
+    // font-style: italic;
     font-size: 1.2rem;
     text-align: left;
     color: rgb(0, 0, 0);
@@ -635,7 +644,8 @@
   #story-btn {
     position: absolute;
     bottom: 0;
-    left: -1rem;
+    // left: -1rem;
+    margin-left: -2rem;
     background: white;
     margin-bottom: 2rem;
     padding: 0 1rem;
@@ -668,5 +678,38 @@
   }
   #runners {
     transform: scale(0.9);
+  }
+  #girl {
+    width: 120px;
+    position: absolute;
+    bottom: 0;
+    transform: translate(-23rem, -6rem);
+  }
+  #love-and {
+    // background: url("../assets//bg-n.jpg");
+    // 通过::before伪元素来设置背景
+    position: relative;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.432);
+    color: white;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../assets/bg-n.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      opacity: 1;
+      filter: brightness(0.8) contrast(1.1);
+    }
   }
 </style>

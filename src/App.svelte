@@ -117,7 +117,7 @@
         </div>
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div class="item" on:click="{() => scrollTo('what-else-we-can-do')}">
-          流程 · 生死时速
+          流程 · 生死摆渡
         </div>
       </div>
     </div>

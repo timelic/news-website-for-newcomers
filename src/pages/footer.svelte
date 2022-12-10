@@ -25,12 +25,13 @@
   <div style="height: 1px; background: #ccc;margin: 2rem 0;"></div>
   <div class="bottom">
     <div>数据来源</div>
-    <div>中国裁判文书网</div>
+    <div>裁判文书网</div>
     <div>中国红十字会官网</div>
     <div>中国人体器官捐献管理中心</div>
     <div>中华人民共和国国家卫生健康委员会</div>
-    <div>全球器官捐献和移植观察网</div>
+    <div>全球器官捐献和移植观察网（GODT）</div>
     <div>《中国器官移植发展报告》</div>
+
     <div style="margin-top: 2rem">参考资料</div>
     <div>
       [1]周帆,王蒲生.身体、死亡与利他主义:从中国传统生命伦理观看器官捐献之困[J].医学与哲学,2022,43(12):31-36
