@@ -113,7 +113,7 @@
       frameborder="0"
       title=""
       style="margin-bottom: 2rem"></iframe>
-    <div style="margin-bottom: 1rem">
+    <!-- <div style="margin-bottom: 1rem">
       2015-2020年，我国完成公民逝世后器官捐献累计<underline>29334例</underline
       >，
     </div>
@@ -121,7 +121,7 @@
       每百万人口器官捐献率（PMP）从2015年的2.01升至2021年的<underline
         >3.63</underline
       >
-    </div>
+    </div> -->
   </section>
   <section class="text-align">
     <div>2021年</div>

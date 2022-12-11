@@ -1,10 +1,10 @@
 <section id="love-and" class="text-align">
-  <div>爱与勇气，颠扑不破。</div>
-  <div>上苍用疾病与死亡考验我们，</div>
-  <div>我们用大爱和勇气诠释生命的意义。</div>
-  <div>而我们也始终相信，</div>
-  <div>爱有回音，爱与勇气，</div>
-  <div>同频搏动，定会战胜疾病。</div>
+  <div>爱与勇气，颠扑不破</div>
+  <div>上苍用疾病与死亡考验我们</div>
+  <div>我们用大爱和勇气诠释生命的意义</div>
+  <div>而我们也始终相信</div>
+  <div>爱有回音，爱与勇气</div>
+  <div>同频搏动，定会战胜疾病</div>
 </section>
 
 <style lang="scss">

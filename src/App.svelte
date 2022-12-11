@@ -125,6 +125,7 @@
       </div>
     </div>
     <div class="right">
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
       <span on:click="{() => scrollTo('footer')}">数据来源</span>
     </div>
   </div>
@@ -146,6 +147,12 @@
   <WhatHaveWeDone />
   <NewspaperClipping />
   <WhatBringsDonationIncrement />
+  <TextAlign
+    text="{`严谨为路，八方奔赴。随着我国器官捐献事业的不断发展、流程不断规范，越来越多的志愿者自愿加入器官捐献志愿者的行列。这场生命的接力，不断壮大，也留下了感动的声音，我们欣喜地发现，点点星光，连成了一道星河。`}"
+    bg="b"
+    outerStyle="height: 12rem; margin-bottom: -2rem;"
+    innerStyle="max-width: 851px"
+  />
   <Stars />
   <LoveAndBravery />
   <Footer />
