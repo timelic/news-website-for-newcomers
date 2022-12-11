@@ -20,6 +20,9 @@
 
   import MenuSvg from "./assets/MenuOutline.svg";
 
+  // love-and-bravery
+  import LoveAndBravery from "./pages/love-and-bravery.svelte";
+
   import { onMount } from "svelte";
   import { eventbus } from "@utils";
   // 下载字体资源 svelte居然不允许顶层await
@@ -144,6 +147,7 @@
   <NewspaperClipping />
   <WhatBringsDonationIncrement />
   <Stars />
+  <LoveAndBravery />
   <Footer />
 </main>
 

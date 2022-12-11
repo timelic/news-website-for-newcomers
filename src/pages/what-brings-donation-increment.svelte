@@ -76,16 +76,14 @@
     >期全国人体器官捐献协调员培训班。
   </div>
   <img id="runners" src="{runners}" alt="" srcset="" />
-  <div style="text-align: center; font-size: 1.2rem;">
+  <!-- <div style="text-align: center; font-size: 1.2rem;">
     全国器官捐献协调员培训情况
-  </div>
+  </div> -->
   <div>
     2021年，中国人体器官捐献管理中心完成年度新增人体器官捐献协调员综合测评工作，共<underline
       >431</underline
-    >名学员通过综合测评，取得培训合格证书。
-  </div>
-  <div>
-    同时，全国共有<underline>2252</underline
+    >名学员通过综合测评，取得培训合格证书。 同时，全国共有<underline
+      >2252</underline
     >名协调员通过中国人体器官捐献管理中心的年度考核完成注册。
   </div>
   <div>
@@ -177,8 +175,6 @@
   </div>
   <div>
     七年以来，我们在党中央和国务院支持下，在医疗事业中持续进行“壮士断腕”、“刮骨疗毒”的深入改革，不断在观察中积累经验、在实践中维护正义。
-  </div>
-  <div>
     而在此之后，国家层面的法律法规和地方性管理办法、有关条例等都在不断发展完善。
   </div>
   <!-- <div>
@@ -405,15 +401,14 @@
   />
 </section>
 
-<section id="love-and" class="text-align">
+<!-- <section id="love-and" class="text-align">
   <div>爱与勇气，颠扑不破。</div>
   <div>上苍用疾病与死亡考验我们，</div>
   <div>我们用大爱和勇气诠释生命的意义。</div>
   <div>而我们也始终相信，</div>
   <div>爱有回音，爱与勇气，</div>
   <div>同频搏动，定会战胜疾病。</div>
-</section>
-
+</section> -->
 <style lang="scss">
   #what-brings-donation-increment::before {
     background-image: url("../assets/people.jpg");
@@ -684,32 +679,5 @@
     position: absolute;
     bottom: 0;
     transform: translate(-23rem, -6rem);
-  }
-  #love-and {
-    // background: url("../assets//bg-n.jpg");
-    // 通过::before伪元素来设置背景
-    position: relative;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.432);
-    color: white;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url("../assets/bg-n.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: -1;
-      opacity: 1;
-      filter: brightness(0.8) contrast(1.1);
-    }
   }
 </style>
