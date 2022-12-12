@@ -9,6 +9,8 @@
   import DanmuJs from "danmu.js";
   import organDonate from "../assets/organ-donate.gif";
   import Girl from "../assets/girl.png";
+  // git-box
+  import GifBox from "../assets/gif-box.gif";
   function textAppear(textElId: string) {
     onMount(() => {
       const client = document.getElementById("app");
@@ -303,6 +305,7 @@
   <div>还是擦干泪水，尊重这份最后的爱传递下去</div>
   <div>一个又一个家属做出了他们的决定</div>
   <img id="girl" src="{Girl}" alt="" srcset="" />
+  <img id="gift-box" src="{GifBox}" alt="" />
   <div id="story-btn">点击查看小溪外公的捐献故事</div>
 </div>
 <section class="text-align" id="story-section">
@@ -399,6 +402,10 @@
     alt=""
     srcset=""
   />
+</section>
+
+<section class="text-align text-left">
+  严谨为路，八方奔赴。随着我国器官捐献事业的不断发展、流程不断规范，越来越多的志愿者自愿加入器官捐献志愿者的行列。这场生命的接力，不断壮大，也留下了感动的声音，我们欣喜地发现，点点星光，连成了一道星河。
 </section>
 
 <!-- <section id="love-and" class="text-align">
@@ -679,5 +686,11 @@
     position: absolute;
     bottom: 0;
     transform: translate(-23rem, -6rem);
+  }
+  #gift-box {
+    width: 350px;
+    position: absolute;
+    bottom: 0;
+    transform: translate(8rem, -6rem);
   }
 </style>
