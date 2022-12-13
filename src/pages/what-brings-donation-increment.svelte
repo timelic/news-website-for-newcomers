@@ -135,10 +135,18 @@
       title=""></iframe>
   </div> -->
   <div class="chart">
-    <iframe
+    <!-- <iframe
       src="https://dycharts.com/xshow/index.html?id=63a2a1c15502293b608087c97e988683"
       width="1920"
       height="280"
+      scrolling="no"
+      frameborder="0"
+      title=""
+      style="transform: scale(1.1);"></iframe> -->
+    <iframe
+      src="https://dycharts.com/xshow/index.html?id=63a2a1c15502293b608087c97e988683"
+      width="1920"
+      height="415"
       scrolling="no"
       frameborder="0"
       title=""

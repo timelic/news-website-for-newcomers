@@ -5,7 +5,9 @@
     const audio = document.getElementById(
       "newspaper-clipping-audio"
     ) as HTMLAudioElement;
-    onSee("newspaper-clipping-audio", () => {});
+    onSee("newspaper-clipping-audio", () => {
+      audio.play();
+    });
     const client = document.getElementById("app");
     const el = document.getElementById("newspaper-clipping");
     const imgs = document.querySelectorAll<HTMLImageElement>(

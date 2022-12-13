@@ -29,7 +29,7 @@
     column-gap: 4rem;
     img {
       width: 350px;
-      height: fit-content;
+      height: 320px;
     }
     & > div {
       display: flex;
