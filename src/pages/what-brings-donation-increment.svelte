@@ -341,7 +341,7 @@
       虽然外公生前只是在新闻上看到有关器官捐献的报道，也只是在生前口头表达过关于器官捐献的强烈意愿，本人并没有确认签署志愿协议。但是舅舅还是在医院和工作人员的帮助下，完成评估、登记、确认等一系列流程，帮外公完成了最后的心愿。
     </div>
     <div class="italic">
-      最后，小希外公的眼角膜成功帮助一位患者重见光明。这位慈祥、温暖的长者也如愿在生命的最后为世界留下了一抹光亮。
+      最后，小溪外公的眼角膜成功帮助一位患者重见光明。这位慈祥、温暖的长者也如愿在生命的最后为世界留下了一抹光亮。
     </div>
   </div>
 </section>
@@ -376,11 +376,11 @@
   <div>
     热缺血时，虽然血流中断但移植物的组织细胞仍继续代谢，期间最易发生移植物缺血的严重后果。所以，在我们犹豫不决的时候，正是进行移植手术的黄金时间。
   </div>
-  <div class="chart" style="transform: scale(0.9); margin: -50px 0;">
+  <div class="chart" style="transform: scale(0.7); margin: -140px 0;">
     <iframe
       src="https://dycharts.com/xshow/index.html?id=f11a7130c67897a2b81cb663e06fe030"
       width="1920"
-      height="450"
+      height="750"
       scrolling="no"
       frameborder="0"
       title=""></iframe>
