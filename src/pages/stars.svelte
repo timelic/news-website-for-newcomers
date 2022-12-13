@@ -15,13 +15,17 @@
       direction: "alternate",
     });
     const audio = document.getElementById("stars-audio") as HTMLAudioElement;
+    const audio2 = document.getElementById(
+      "newspaper-clipping-audio"
+    ) as HTMLAudioElement;
     // eventbus.on("start", audio.play);
     onSee("stars", () => {
       audio.currentTime = 0;
       audio.muted = false;
 
       // play audio
-      // audio.play();
+      audio.play();
+      audio2.pause();
       const timestamps = [
         [0, 5000],
         [19000, 25000],
