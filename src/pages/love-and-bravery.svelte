@@ -26,7 +26,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url("../assets/bg-n.jpg");
+      // background: url("../assets/bg-n.jpg");
+      background-color: black;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;

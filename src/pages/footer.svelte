@@ -14,12 +14,14 @@
     </div>
 
     <div class="right">
-      <div>数据整理 | 林依淇 陈雪璐 王艺潼</div>
-      <div>数据呈现 | 林依淇 陈雪璐</div>
-      <div>文案制作 | 王艺潼 陈雪璐</div>
-      <div>前端设计 | 王艺潼</div>
-      <div>深度采访 | 王艺潼</div>
-      <div>手绘制作 | 王艺潼 林依淇</div>
+      <div>出品方 华南理工大学 新闻与传播学院</div>
+      <div>数据整理 林依淇 陈雪璐 王艺潼</div>
+      <div>数据整理 林依淇 陈雪璐 王艺潼</div>
+      <div>数据呈现 林依淇 陈雪璐</div>
+      <div>文案制作 王艺潼 陈雪璐</div>
+      <div>前端设计 王艺潼</div>
+      <div>深度采访 王艺潼</div>
+      <div>手绘制作 王艺潼 林依淇</div>
     </div>
   </div>
   <div style="height: 1px; background: #ccc;margin: 2rem 0;"></div>
@@ -71,7 +73,7 @@
         flex-grow: 1;
       }
       .left {
-        width: 600px;
+        width: 580px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

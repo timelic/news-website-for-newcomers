@@ -124,7 +124,7 @@
         </div>
       </div>
     </div>
-    <div class="right">
+    <div class="right" style="opacity: 0;">
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <span on:click="{() => scrollTo('footer')}">数据来源</span>
     </div>

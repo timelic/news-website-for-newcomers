@@ -27,10 +27,10 @@
       audio.play();
       audio2.pause();
       const timestamps = [
-        [0, 5000],
-        [19000, 25000],
-        [25000, 32000],
-        [39000, 44000],
+        [0, 3000],
+        [3500, 9000],
+        [9000, 15000],
+        [15000, 22000],
       ];
       timestamps.forEach(([start, end], i) => {
         setTimeout(async () => {
