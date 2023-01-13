@@ -17,7 +17,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.432);
     color: white;
     &::before {
       content: "";
@@ -27,13 +26,13 @@
       width: 100%;
       height: 100%;
       // background: url("../assets/bg-n.jpg");
-      background-color: black;
+      background-color: rgb(24, 24, 24);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       z-index: -1;
       opacity: 1;
-      filter: brightness(0.8) contrast(1.1) blur(1px);
+      // filter: brightness(0.8) contrast(1.1) blur(1px);
     }
   }
 </style>

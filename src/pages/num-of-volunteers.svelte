@@ -119,7 +119,7 @@
     scrolling="no"
     frameborder="0"
     title=""></iframe>
-  <div id="num-of-volunteers-title">志愿登记人数</div>
+  <!-- <div id="num-of-volunteers-title">志愿登记人数</div> -->
 </section>
 
 <style lang="scss" global>

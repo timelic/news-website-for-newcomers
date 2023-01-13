@@ -153,7 +153,7 @@
       style="transform: scale(1.1);"></iframe>
   </div>
   <div>
-    与此同时，为了更大程度激发捐献器官的医疗价值，许多医疗团队不断攻坚克难，器官移植医疗质量也不断完善，器官保存于供体器官维护技术不断改进，术后配套技术也不断完善，<underline
+    与此同时，为了更大程度激发捐献器官的医疗价值，许多医疗团队不断攻坚克难，器官移植医疗质量也不断完善，器官保存与供体器官维护技术不断改进，术后配套技术也不断完善，<underline
       >1年和5年术后存活率已达世界先进水平之列</underline
     >。
   </div>
@@ -227,8 +227,8 @@
 <section class="text-align text-left">
   <div>
     在各方的努力下，目前我国器官捐献事业取得了长足的进步，器官捐献、移植数量两项指标均居世界第<underline
-      >二</underline
-    >位，但是每百万人口器官捐献率（PMP）却仅为世界第<underline>四十八</underline
+      >2</underline
+    >位，但是每百万人口器官捐献率（PMP）却仅为世界第<underline>48</underline
     >位。
   </div>
   <div>

@@ -1,8 +1,18 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import DanmuJs from "danmu.js";
-  import { danmuList } from "./data-danmu";
-
+  import { danmuList as _danmuList } from "./data-danmu";
+  function shuffleList(list: string[]): string[] {
+    let len = list.length;
+    for (let i = 0; i < len - 1; i++) {
+      let idx = Math.floor(Math.random() * (len - i));
+      let temp = list[idx];
+      list[idx] = list[len - i - 1];
+      list[len - i - 1] = temp;
+    }
+    return list;
+  }
+  const danmuList = shuffleList(_danmuList);
   onMount(() => {
     let danmu = new DanmuJs({
       container: document.getElementById("last"), //弹幕容器，该容器发生尺寸变化时会自动调整弹幕行为
