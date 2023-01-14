@@ -17,7 +17,7 @@
         "newspaper-clipping-audio"
       ) as HTMLAudioElement;
       audio1.play();
-      audio2.play();
+      // audio2.play();
     });
   });
 </script>

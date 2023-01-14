@@ -16,7 +16,6 @@
     <div class="right">
       <div>指导老师 吴小坤</div>
       <div>数据整理 林依淇 陈雪璐 王艺潼</div>
-      <div>数据整理 林依淇 陈雪璐 王艺潼</div>
       <div>数据呈现 林依淇 陈雪璐</div>
       <div>文案制作 王艺潼 陈雪璐</div>
       <div>前端设计 王艺潼</div>
