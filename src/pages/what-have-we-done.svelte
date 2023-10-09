@@ -125,7 +125,7 @@
   </section>
   <section class="text-align">
     <div>2021年</div>
-    <div>我国实施肾脏移手术<underline>12039</underline>例</div>
+    <div>我国实施肾脏移植手术<underline>12039</underline>例</div>
     <div>实施肝脏移植手术<underline>5834</underline>例</div>
     <div>肺脏<underline>775</underline>例</div>
     <div>心脏<underline>738</underline>例</div>

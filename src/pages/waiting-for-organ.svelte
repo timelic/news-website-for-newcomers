@@ -25,8 +25,8 @@
         if (!text.classList.contains("animate__fadeInUp"))
           text.classList.add("animate__fadeInUp");
       } else if (progress >= 1) {
-        if (!text.classList.contains("animate__fadeOutUp"))
-          text.classList.add("animate__fadeOutUp");
+        // if (!text.classList.contains("animate__fadeOutUp"))
+        //   text.classList.add("animate__fadeOutUp");
         client.removeEventListener("scroll", cb);
       }
     };

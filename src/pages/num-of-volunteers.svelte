@@ -95,7 +95,7 @@
           .setAttribute("style", "--opacity: 1");
       }
     };
-    client.addEventListener("scroll", cb2);
+    // client.addEventListener("scroll", cb2);
   });
 </script>
 

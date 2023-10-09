@@ -54,7 +54,7 @@
     setInterval(() => {
       const d = getNextDanmu();
       const style = {
-        color: d.startsWith("W") ? "yellow" : "white",
+        color: d.startsWith("W") ? "#ff4444" : "white",
         transform: d.startsWith("W") ? "scale(1.2)" : "scale(0.8)",
       };
       danmu.sendComment({

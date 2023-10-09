@@ -36,8 +36,8 @@
           text.classList.add("animate__fadeInUp");
         (document.getElementById("stars-audio") as HTMLAudioElement).pause();
       } else if (progress >= 1) {
-        if (!text.classList.contains("animate__fadeOutUp"))
-          text.classList.add("animate__fadeOutUp");
+        // if (!text.classList.contains("animate__fadeOutUp"))
+        //   text.classList.add("animate__fadeOutUp");
         client.removeEventListener("scroll", cb);
       }
     };
